@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link href="https://fonts.googleapis.com/css?family=Jua&display=swap" rel="stylesheet" />
+		<!-- Bootstrap CSS -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+			crossorigin="anonymous"
+		/>
+
+		<title>낙엽과 함께하는 닮은꼴 찾기</title>
+		<link rel="alternate" hreflang="ko" href="index.html" />
+		<link rel="alternate" hreflang="en" href="en_index.html" />
+		<link rel="alternate" hreflang="x-default" href="index.html" />
+
+		<meta name="title" content="닮은꼴 찾기" />
+		<meta
+			name="subject"
+			content="얼굴로 보는 인공지능 닮은꼴 찾기, 나와 닮은 인물을 찾아보세요!"
+		/>
+		<meta
+			name="keywords"
+			content="닮은꼴, 인공지능 싱크로율 테스트, 얼굴상, 얼굴상 테스트, 나와 닮은 연예인, BTS, 정국, 진, 뷔, jhop, RM, sugar, 슈가, kook, jin, AI 얼굴상, 조코딩, 테스트"
+		/>
+		<meta name="author" content="NAKYUP" />
+		<meta
+			name="description"
+			content="사진으로 보는 인공지능 싱크로율 테스트, 나와 닮은 인물상을 찾아보세요! 대표 연예인 사진 데이터로 학습한 인공지능이 나의 얼굴로 동물상과 특징을 찾아드립니다. 회원가입도 필요없이 화면에서 바로 확인해보세요! 사진 데이터는 그 어디에도 전송되지 않습니다. 인공지능이 보는 나와 친구의 싱크로율 테스트 한번 해보세요! 싱크로율 테스트를 통해 나와 닮은 BTS 멤버찾기를 할 수 있습니다. 낙엽의 닮은꼴 찾기는 조코딩의 수익형 웹 만들기 유튜브 영상을 참조하여 제작했어요."
+		/>
+		<link rel="stylesheet" href="style.css" />
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-145482737-6"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag('js', new Date());
+			gtag('config', 'UA-145482737-6');
+		</script>
+		
+		<!-- Go to www.addthis.com/dashboard to customize your tools 링크보내기 코드 --> 
+		<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5fe5867506cc6dba"></script>
+		
+	</head>
+
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-light nav-distance">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="#">낙엽과 함께하는 닮은꼴 찾기</a>
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarNavAltMarkup"
+					aria-controls="navbarNavAltMarkup"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+					<div class="navbar-nav">
+						<a class="nav-link active" aria-current="page" href="index.html"
+							>BTS싱크로율</a
+						>
+						<a class="nav-link" href="blackpink.html">준비중</a>
+						<a class="nav-link" href="princess.html">Princess싱크로율</a>
+						<a class="nav-link" href="decalcomani.html">준비중</a>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<section class="container d-flex flex-column justify-content-center align-items-center">
+			<span class="select-language">Language</span>
+			<select onchange="changeLanguage(this)" class="custom-select col-8">
+				<option value="ko" lang="ko">한국어</option>
+				<option value="en" lang="en">English</option>
+			</select>
+		</section>
+		<script>
+			var ua = navigator.userAgent.toLowerCase();
+			function changeLanguage(lang) {
+				if (
+					(navigator.userAgent.indexOf('Mac OS') > 0 &&
+						navigator.userAgent.indexOf('Safari') <= 0) ||
+					(navigator.userAgent.indexOf('Android') > 0 &&
+						navigator.userAgent.indexOf('wv)') > 0)
+				) {
+					if (ua.match('android') != null) {
+						window.open('googlechrome://navigate?url=' + lang.value + '_index.html');
+						//android 'googlechrome://navigate?url=animalface.site/' +								lang.value + '/index.html'
+					} else if (
+						ua.indexOf('iphone') > -1 ||
+						ua.indexOf('ipad') > -1 ||
+						ua.indexOf('ipod') > -1
+					) {
+						window.location.href = lang.value + '_index.html'; //iOS
+						// href="https://animalface.site/"+lang.value+"/index.html"
+					} else {
+						window.location.href = lang.value + '_index.html';
+						// etc
+						// href ='https://animalface.site/' + lang.value + '/index.html'
+					}
+				} else {
+					window.location.href = lang.value + '_index.html';
+					// window.location.href = 'https://animalface.site/' + lang.value + '/index.html'
+				}
+			}
+		</script>
+		<section class="section">
+			<h1 class="title">인공지능이 알려주는 싱크로율</h1>
+			<h2 class="subtitle">난 BTS 누구와 닮았을까?</h2>
+		</section>
+		<section class="youtube">
+			<div class="container mt-5 youtube-cover d-flex flex-row-reverse bd-highlight">
+				<img src="img/youtube_13x10.jpg" alt="" class="youtube-icon" />
+				<a
+					href="https://www.youtube.com/channel/UCQNE2JmbasNYbjGAcuBiRRg"
+					class="youtube-link"
+					>By NAKYUP (LINK to 조코딩 유튜브)
+				</a>
+			</div>
+		</section>
+		<div></div>
+		<h4 class="pt-4 pb-2 d-flex justify-content-center">성별을 체크하세요</h4>
+		<section class="d-flex justify-content-center">
+			<p class="d-flex align-items-center pr-3">여성</p>
+			<div>
+				<input type="checkbox" id="gender" />
+				<label for="gender">
+					<span class="knob">
+						<i></i>
+					</span>
+				</label>
+			</div>
+			<p class="d-flex align-items-center pl-3">남성</p>
+		</section>
+		<div></div>
+		<script
+			class="jsbin"
+			src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"
+		></script>
+		<div class="mt-3 container file-upload">
+			<div class="image-upload-wrap">
+				<input
+					class="file-upload-input"
+					type="file"
+					onchange="readURL(this);"
+					accept="image/*"
+				/>
+				<div class="drag-text">
+					<img src="img/upload2_57x57.png" class="mt-5 pt-5 upload" alt="upload-image" />
+					<h3 class="mb-5 pb-5 pt-4 upload-text">
+						여기를 눌러서 얼굴 정면 사진을 업로드하세요.
+					</h3>
+				</div>
+			</div>
+			<div class="file-upload-content">
+				<img class="file-upload-image" id="face_image" src="#" alt="your image" />
+				<div id="loading" class="animated bounce">
+					<div class="spinner-border" role="status">
+						<span class="sr-only">Loading...</span>
+					</div>
+					<p class="text-center">NAKYUP의 AI가 당신의 얼굴을 분석중입니다.</p>
+				</div>
+				<p class="result-message1"></p>
+				<p class="result-message"></p>
+				<div id="label-container" class="d-flex flex-column justify-content-around"></div>	
+                <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                <div class="addthis_inline_share_toolbox"></div>
+            
+				<div class="pt-3 image-title-wrap">
+					<button
+						type="button p-2"
+						onclick="location.href='ko_index.html' "
+						class="try-again-btn"
+					>
+						<span class="try-again-text">다시 해보기</span>
+					</button>
+				</div>
+			</div>
+			<!-- <div class="file-upload-content">
+				<img class="file-upload-image" id="user_image" src="#" alt="your image" />
+				<div class="image-title-wrap">
+					<button type="button p-2" class="try-again-btn" onclick="gaReload()"> /선택1
+					<button type="button" onclick="removeUpload()" class="remove-image">
+						새로 올리기 <span class="image-title">Uploaded Image</span>
+					</button>
+				</div>
+			</div> -->
+		</div>
+		<!-- <div id="label-container"></div> -->
+		<!-- <section class="section">
+			<ul id="moreInfo" class="list-inline d-flex justify-content-center">
+				<li class="list-inline-item">
+					<a href="blackpink.html">BLACKPINK</a>
+				</li>
+				<li></li>
+				<li class="list-inline-item">
+					<a href="princess.html">Princess</a>
+				</li>
+				<li class="list-inline-item">
+					<a href="decalcomani.html">Angel vs Devil's 데칼코마니</a>
+				</li>
+			</ul>
+		</section> -->
+
+		<!-- 앱 모델 접속시 팝업 공지 
+<div
+	class="modal fade"
+	id="appModal"
+	tabindex="-1"
+	role="dialog"
+	aria-labelledby="appModalLabel"
+	aria-hidden="true"
+>
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="appModalLabel">싱크로율 테스트 신규 앱 출시!</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body d-flex flex-column justify-content-center align-items-center">
+				<img
+					class=""
+					src="https://play-lh.googleusercontent.com/rygnJczQKZHjJbwHAFhrHDIQ6aMEW_KdILtlzdiSojSlLnKe53F9a5jXdp3PSnPaCYz3=s180-rw"
+					alt="app icon"
+				/>
+				<p class="text-center">
+					싱크로율 테스트가 더욱 업그레이드되어 앱으로 출시되었습니다.
+				</p>
+				<a
+					href="https://apps.apple.com/us/app/%EB%8F%99%EB%AC%BC%EC%83%81-%ED%85%8C%EC%8A%A4%ED%8A%B8/id1535560428"
+					><img
+						class="app-download-icon"
+						src="https://blog.kakaocdn.net/dn/7I3T2/btqMkmYdCj6/kUkbmFe0MpcxsHqwLrAUd0/img.png"
+						alt="Android Google Play Store"
+				/></a>
+				<a href="https://play.google.com/store/apps/details?id=com.jocoding.animalfacetest"
+					><img
+						class="app-download-icon"
+						src="https://blog.kakaocdn.net/dn/c6po0N/btqMgsb7Qpb/MQBT1U1xzqvsabAQd4OYGk/img.png"
+						alt="iPhone Apple AppStore"
+				/></a>
+			</div>
+		</div>
+	</div>
+</div>
+-->
+
+		<footer class="footer pt-5 container d-flex justify-content-center">
+			<div>
+				<p>&copy; 낙엽 NAKYUP 2020. All Rights Reserved.</p>
+				<ul id="moreInfo" class="list-inline d-flex justify-content-center">
+					<li class="list-inline-item">
+						<a href="privacy.html">Privacy of NAKYUP</a>
+					</li>
+					<li></li>
+					<li class="list-inline-item">
+						<a href="https://animalface.site/blog">About coding tutorials</a>
+					</li>
+				</ul>
+			</div>
+		</footer>
+
+		<!-- <script>
+			function gaReload() {
+				gtag('event', '다른 사진으로 재시도', {
+					event_category: '다른 사진으로 재시도',
+				});
+				window.location.reload();
+			}
+			function gaReload1() {
+				gtag('event', '다른 사진으로 재시도 1차', {
+					event_category: '다른 사진으로 재시도',
+				});
+			}
+			function gaReload2() {
+				gtag('event', '다른 사진으로 재시도 2차', {
+					event_category: '다른 사진으로 재시도',
+				});
+				window.location.reload();
+			}
+		</script> -->
+
+		<!-- Option 1: Bootstrap Bundle with Popper -->
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+			crossorigin="anonymous"
+		></script>
+
+		<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+
+		<script>
+			function readURL(input) {
+				if (input.files && input.files[0]) {
+					var reader = new FileReader();
+
+					reader.onload = function (e) {
+						$('.image-upload-wrap').hide();
+						$('#loading').show();
+
+						$('.file-upload-image').attr('src', e.target.result);
+						$('.file-upload-content').show();
+
+						$('.image-title').html(input.files[0].name);
+					};
+
+					reader.readAsDataURL(input.files[0]);
+					init().then(() => {
+						console.log('hello');
+						predict();
+						$('#loading').hide();
+					});
+				} else {
+					removeUpload();
+				}
+			}
+
+			function removeUpload() {
+				$('.file-upload-input').replaceWith($('.file-upload-input').clone());
+				$('.file-upload-content').hide();
+				$('.image-upload-wrap').show();
+			}
+			$('.image-upload-wrap').bind('dragover', function () {
+				$('.image-upload-wrap').addClass('image-dropping');
+			});
+			$('.image-upload-wrap').bind('dragleave', function () {
+				$('.image-upload-wrap').removeClass('image-dropping');
+			});
+		</script>
+		<script type="text/javascript">
+			let URL;
+			const urlMale = 'https://teachablemachine.withgoogle.com/models/VZDp5c4WD/';
+			const urlFemale = 'https://teachablemachine.withgoogle.com/models/VZDp5c4WD/';
+			let model, webcam, labelContainer, maxPredictions;
+			async function init() {
+				if (document.getElementById('gender').checked) {
+					URL = urlMale;
+				} else {
+					URL = urlFemale;
+				}
+				const modelURL = URL + 'model.json';
+				const metadataURL = URL + 'metadata.json';
+				model = await tmImage.load(modelURL, metadataURL);
+				maxPredictions = model.getTotalClasses();
+				labelContainer = document.getElementById('label-container');
+				for (let i = 0; i < maxPredictions; i++) {
+					var element = document.createElement('div');
+					element.classList.add('d-flex');
+					labelContainer.appendChild(element);
+				}
+			}
+			async function predict() {
+				var image = document.getElementById('face_image');
+				const prediction = await model.predict(image, false);
+				prediction.sort((a, b) => parseFloat(b.probability) - parseFloat(a.probability));
+				console.log(prediction[0].className);
+				$('.result-message1').html(title + explain + celeb);
+				var resultTitle, resultExplain, resultCeleb;
+				if (document.getElementById('gender').checked) {
+					gtag('event', '테스트 수행', {
+						event_category: '테스트 수행',
+						event_label: '남성',
+					});
+					switch (prediction[0].className) {
+						case 'jhop':
+							resultTitle = '귀여운 동생';
+							resultExplain =
+								'평범해 보일지도 모르는 당신에게서 귀여움을 느끼는 여성이 있다는 걸 아시나요? 폭발적인 춤으로 반전매력을 뿜어낸다면 BTS 제이홉과 싱크로율 100%! ';
+							resultCeleb = '';
+							gtag('event', '남성 결과 jhop', { event_category: '남성 결과' });
+							break;
+						case 'jin':
+							resultTitle = '우월한 외모 ';
+							resultExplain =
+								'배우를 해도 될 만큼 이목구비가 뚜렷하고 하얀피부가 특징인 당신은 BTS의 석진과 닮았어요. 키도 크고 깔끔한 목소리까지 가졌다면 당신은 그저 세상의 빛이세요.';
+							resultCeleb ='';
+							gtag('event', '남성 결과 jin', { event_category: '남성 결과' });
+							break;
+						case 'kook':
+							resultTitle = '남자의 휘파람';
+							resultExplain =
+								'남성미가 넘치는 선굵은 외모의 당신은 평소 조용한 모습인 반면 결정적인 때 휘파람 하나로 슈퍼스타가 될 수 있어요. 양면적 매력이 모두 넘치는 BTS의 정국이 닮았네요. ';
+							resultCeleb ='';
+							gtag('event', '남성 결과 kook', { event_category: '남성 결과' });
+							break;
+						case 'RM':
+							resultTitle = '남다른 센스쟁이';
+							resultExplain =
+								'뚜렷한 인상에 자신만만한 표정과 옷 센스가 좋은 당신은 BTS RM을 가장 많이 닮았네요. 매력적인 목소리로 부르는 랩이 당신과 어울릴 것 같아요.';
+							resultCeleb ='';
+							gtag('event', '남성 결과 RM', { event_category: '남성 결과' });
+							break;
+						case 'sugar':
+							resultTitle = '시크한 커맨더';
+							resultExplain =
+								'무심한듯하고 살짝 졸린듯한 표정으로 친구 마음을 애타게 하는 당신은 BTS 슈가를 닮았어요. 가끔은 웃는 모습으로 다정함을 보여주세요. 슈퍼스타의 매력 뿜~!';
+							resultCeleb = '';
+							gtag('event', '남성 결과 sugar', { event_category: '남성 결과' });
+							break;
+						case 'jimin':
+							resultTitle = '빠져드는 매력덩어리';
+							resultExplain =
+								'가만히만 있어도 은은하게 풍기는 매력으로 사랑받는 당신! 눈, 코, 입 어쩜 이러십니까? BTS 지민을 연상케 하는 당신에게 겸손은 사치일지도...모르겠네요.';
+							resultCeleb = '';
+							gtag('event', '남성 결과 jimin', { event_category: '남성 결과' });
+							break;
+						case 'vy':
+							resultTitle = '미남 of 미남';
+							resultExplain =
+								'2017 가장 잘생긴 얼굴 1위에 선정된 BTS V를 닮은 그대는 함께 있는 것만으로도 큰 힘이 됩니다. 그대와 함께라면 세상의 어떤 시련도 이겨낼 수 있을거에요. ';
+							resultCeleb = '';
+							gtag('event', '남성 결과 vy', { event_category: '남성 결과' });
+							break;
+						default:
+							resultTitle = '알수없음';
+							resultExplain = '죄송합니다. 싱크로율 분석에 실패했어요.';
+							resultCeleb = '';
+							gtag('event', '남성 결과 알수없음', { event_category: '남성 결과' });
+					}
+				} else {
+					gtag('event', '테스트 수행', {
+						event_category: '테스트 수행',
+						event_label: '여성',
+					});
+					switch (prediction[0].className) {
+						case 'jhop':
+							resultTitle = '귀여운 동생';
+							resultExplain =
+								'BTS 제이홉과 싱크로율이 가장 높은 당신의 일상속에는 평범과 반전이 공존하고 있어요. 당신에게서 귀여움을 느끼는 이성이 있다는 걸 아시나요?';
+							resultCeleb = '';
+							gtag('event', '여성 결과 jhop', { event_category: '여성 결과' });
+							break;
+						case 'jin':
+							resultTitle = '빛나는 외모 ';
+							resultExplain =
+								'뚜렷한 이목구비와 하얀피부가 매력인 당신은 BTS의 석진과 닮았어요. 어쩌면 당신은 어둠속에서도 홀로 빛나고 있을것 같아요.';
+							resultCeleb ='';
+							gtag('event', '여성 결과 jin', { event_category: '여성 결과' });
+							break;
+						case 'kook':
+							resultTitle = '보이시한 카리스마';
+							resultExplain =
+								'여성스러우면서도 보이시한 양면적 매력의 당신은 BTS의 정국이 닮았네요. 혹시 남사친보다 여사친이 많지 않으세요?';
+							resultCeleb ='';
+							gtag('event', '여성 결과 kook', { event_category: '여성 결과' });
+							break;
+						case 'RM':
+							resultTitle = '남다른 센스쟁이';
+							resultExplain =
+								'뚜렷한 인상에 자신만만한 표정과 옷 센스가 좋은 당신은 BTS RM을 가장 많이 닮았네요. 매력적인 목소리로 부르는 랩이 당신과 어울릴 것 같아요.';
+							resultCeleb ='';
+							gtag('event', '여성 결과 RM', { event_category: '여성 결과' });
+							break;
+						case 'sugar':
+							resultTitle = '시크한 커맨더';
+							resultExplain =
+								'무심한듯하고 살짝 졸린듯한 표정으로 친구 마음을 애타게 하는 당신은 BTS 슈가를 닮았어요. 가끔은 웃는 모습으로 다정함을 보여주세요. 슈퍼스타의 매력 뿜~!';
+							resultCeleb = '';
+							gtag('event', '여성 결과 sugar', { event_category: '여성 결과' });
+							break;
+						case 'jimin':
+							resultTitle = '빠져드는 매력덩어리';
+							resultExplain =
+								'눈, 코, 입술 모두 매력적인 당신은 가만히만 있어도 은은하게 풍기는 매력으로 사랑받는 타입입니다. BTS 지민을 연상케 하는 당신에게 겸손은 사치일지도...모르겠네요.';
+							resultCeleb = '';
+							gtag('event', '여성 결과 jimin', { event_category: '여성 결과' });
+							break;
+						case 'vy':
+							resultTitle = '뷔이티풀';
+							resultExplain =
+								'2017 가장 잘생긴 얼굴 1위에 선정된 BTS V와 닮은 그대는 함께 있고 싶은 친구 1순위입니다. 그대와 함께라면 세상의 어떤 시련도 이겨낼 수 있을거에요. ';
+							resultCeleb = '';
+							gtag('event', '여성 결과 vy', { event_category: '여성 결과' });
+							break;
+						default:
+							resultTitle = '알수없음';
+							resultExplain = '';
+							resultCeleb = '';
+							gtag('event', '여성 결과 알수없음', { event_category: '여성 결과' });
+					}
+				}
+				var title =
+					"<div class='" +
+					prediction[0].className +
+					"-animal-title'>" +
+					resultTitle +
+					'</div>';
+				var explain = "<div class='animal-explain pt-2'>" + resultExplain + '</div>';
+				var celeb =
+					"<div class='" +
+					prediction[0].className +
+					"-animal-celeb pt-2 pb-2'>" +
+					resultCeleb +
+					'</div>';
+				$('.result-message').html(title + explain + celeb);
+				var barWidth;
+				// for (let i = 0; i < maxPredictions; i++) {
+				for (let i = 0; i < 3; i++) {	
+					if (prediction[i].probability.toFixed(2) > 0.1) {
+						barWidth = Math.round(prediction[i].probability.toFixed(2) * 100) + '%';
+					} else if (prediction[i].probability.toFixed(2) >= 0.01) {
+						barWidth = '4%';
+					} else {
+						barWidth = '2%';
+					}
+					var labelTitle;
+					switch (prediction[i].className) {
+						case 'jhop':
+							labelTitle = 'JH';
+							break;
+						case 'jimin':
+							labelTitle = 'JM';
+							break;
+						case 'jin':
+							labelTitle = 'J';
+							break;
+						case 'kook':
+							labelTitle = 'KooK';
+							break;
+						case 'RM':
+							labelTitle = 'RM';
+							break;
+						case 'sugar':
+							labelTitle = 'Sugar';
+							break;
+						case 'vy':
+							labelTitle = 'Vy';
+							break;
+						default:
+							labelTitle = 'sorry';
+					}
+					var label =
+						"<div class='animal-label d-flex align-items-center'>" +
+						labelTitle +
+						'</div>';
+					var bar =
+						"<div class='bar-container position-relative container'><div class='" +
+						prediction[i].className +
+						"-box'></div><div class='d-flex justify-content-center align-items-center " +
+						prediction[i].className +
+						"-bar' style='width: " +
+						barWidth +
+						"'><span class='d-block percent-text'>" +
+						Math.round(prediction[i].probability.toFixed(2) * 100) +
+						'%</span></div></div>';
+					labelContainer.childNodes[i].innerHTML = label + bar;
+				}
+			}
+		</script>
+
+		<div>
+			<section class="section">
+				<h2 class="subtitle">마음에 드셨다면 친구 추천, 댓글 부탁드려요~</h2>
+			</section>
+		</div>
+
+		<div id="disqus_thread"></div>
+		<script>
+			/**
+			 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+			 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+			/*
+		var disqus_config = function () {
+		this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+		this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+		};
+		*/
+			(function () {
+				// DON'T EDIT BELOW THIS LINE
+				var d = document,
+					s = d.createElement('script');
+				s.src = 'https://nakyup.disqus.com/embed.js';
+				s.setAttribute('data-timestamp', +new Date());
+				(d.head || d.body).appendChild(s);
+			})();
+		</script>
+		<noscript
+			>Please enable JavaScript to view the
+			<a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript
+		>
+	</body>
+	<!-- Copyright (c) 2020 by Aaron Vanston (https://codepen.io/aaronvanston/pen/yNYOXR)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. -->
+</html>

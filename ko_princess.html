@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link href="https://fonts.googleapis.com/css?family=Jua&display=swap" rel="stylesheet" />
+		<!-- Bootstrap CSS -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+			crossorigin="anonymous"
+		/>
+
+		<title>낙엽과 함께하는 닮은꼴 찾기</title>
+		<link rel="alternate" hreflang="ko" href="ko_princess.html" />
+		<link rel="alternate" hreflang="en" href="en_princess.html" />
+		<link rel="alternate" hreflang="x-default" href="ko_princess.html" />
+
+		<meta name="title" content="닮은꼴 찾기" />
+		<meta
+			name="subject"
+			content="얼굴로 보는 인공지능 닮은꼴 찾기, 나와 닮은 인물을 찾아보세요!"
+		/>
+		<meta
+			name="keywords"
+			content="닮은꼴, 인공지능 싱크로율 테스트, 얼굴상, 얼굴상 테스트, 나와 닮은 공주, 백설공주, 안나, 엘사, 자스민, 잠자는, 숲속의, 공주, 모아나, 라푼젤, 신데렐라, 인어공주, AI 얼굴상, 조코딩, 테스트, 낙엽, NAKYUP"
+		/>
+		<meta name="author" content="NAKYUP" />
+		<meta
+			name="description"
+			content="사진으로 보는 인공지능 싱크로율 테스트, 나와 닮은 인물상을 찾아보세요! 대표 연예인 사진 데이터로 학습한 인공지능이 나의 얼굴로 동물상과 특징을 찾아드립니다. 회원가입도 필요없이 화면에서 바로 확인해보세요! 사진 데이터는 그 어디에도 전송되지 않습니다. 인공지능이 보는 나와 친구의 싱크로율 테스트 한번 해보세요! 싱크로율 테스트를 통해 나와 닮은 공주 찾기를 할 수 있습니다. 낙엽의 닮은꼴 찾기는 조코딩의 수익형 웹 만들기 유튜브 영상을 참조하여 제작했어요."
+		/>
+		<link rel="stylesheet" href="style_princess.css" />
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-145482737-6"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag('js', new Date());
+			gtag('config', 'UA-145482737-6');
+		</script>
+
+		<!-- Go to www.addthis.com/dashboard to customize your tools 링크보내기 코드 -->
+		<script
+			type="text/javascript"
+			src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5fe5867506cc6dba"
+		></script>
+	</head>
+
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-light nav-distance">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="#">낙엽과 함께하는 닮은꼴 찾기</a>
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarNavAltMarkup"
+					aria-controls="navbarNavAltMarkup"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+					<div class="navbar-nav">
+						<a class="nav-link active" aria-current="page" href="ko_princess.html"
+							>Princess싱크로율</a
+						>
+						<a class="nav-link" href="ko_blackpink.html">준비중</a>
+						<a class="nav-link" href="ko_index.html">BTS싱크로율</a>
+						<a class="nav-link" href="decalcomani.html">준비중</a>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<section class="container d-flex flex-column justify-content-center align-items-center">
+			<span class="select-language">Language</span>
+			<select onchange="changeLanguage(this)" class="custom-select col-8">
+				<option value="ko" lang="ko">한국어</option>
+				<option value="en" lang="en">English</option>
+			</select>
+		</section>
+		<script>
+			var ua = navigator.userAgent.toLowerCase();
+			function changeLanguage(lang) {
+				if (
+					(navigator.userAgent.indexOf('Mac OS') > 0 &&
+						navigator.userAgent.indexOf('Safari') <= 0) ||
+					(navigator.userAgent.indexOf('Android') > 0 &&
+						navigator.userAgent.indexOf('wv)') > 0)
+				) {
+					if (ua.match('android') != null) {
+						window.open('googlechrome://navigate?url=' + lang.value + '_princess.html');
+						//android 'googlechrome://navigate?url=animalface.site/' +								lang.value + '/index.html'
+					} else if (
+						ua.indexOf('iphone') > -1 ||
+						ua.indexOf('ipad') > -1 ||
+						ua.indexOf('ipod') > -1
+					) {
+						window.location.href = lang.value + '_princess.html'; //iOS
+						// href="https://animalface.site/"+lang.value+"/index.html"
+					} else {
+						window.location.href = lang.value + '_princess.html';
+						// etc
+						// href ='https://animalface.site/' + lang.value + '/index.html'
+					}
+				} else {
+					window.location.href = lang.value + '_princess.html';
+					// window.location.href = 'https://animalface.site/' + lang.value + '/index.html'
+				}
+			}
+		</script>
+		<section class="section">
+			<h1 class="title">인공지능이 알려주는 싱크로율</h1>
+			<h2 class="subtitle">난 어떤 공주와 닮았을까?</h2>
+		</section>
+		<section class="youtube">
+			<div class="container mt-5 youtube-cover d-flex flex-row-reverse bd-highlight">
+				<img src="img/youtube_13x10.jpg" alt="" class="youtube-icon" />
+				<a
+					href="https://www.youtube.com/channel/UCQNE2JmbasNYbjGAcuBiRRg"
+					class="youtube-link"
+					>By NAKYUP (LINK to 조코딩 유튜브)
+				</a>
+			</div>
+		</section>
+		<div></div>
+
+		<h4 class="pt-4 pb-2 d-flex justify-content-center">
+			애니메이션 캐릭터와 싱크로율 천재는 누구?
+		</h4>
+
+		<section class="princess_images">
+			<div class="container mt-3 princess-cover d-flex justify-content-center">
+				<img src="img/princesses.jpg" alt="" />
+			</div>
+		</section>
+
+		<script
+			class="jsbin"
+			src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"
+		></script>
+		<div class="mt-3 container file-upload">
+			<div class="image-upload-wrap">
+				<input
+					class="file-upload-input"
+					type="file"
+					onchange="readURL(this);"
+					accept="image/*"
+				/>
+				<div class="drag-text">
+					<img src="img/upload2_57x57.png" class="mt-5 pt-5 upload" alt="upload-image" />
+					<h3 class="mb-5 pb-5 pt-4 upload-text">
+						여기를 눌러서 얼굴 정면 사진을 업로드하세요.
+					</h3>
+				</div>
+			</div>
+			<div class="file-upload-content">
+				<img class="file-upload-image" id="face_image" src="#" alt="your image" />
+				<div id="loading" class="animated bounce">
+					<div class="spinner-border" role="status">
+						<span class="sr-only">Loading...</span>
+					</div>
+					<p class="text-center">NAKYUP의 AI가 당신의 얼굴을 분석중입니다.</p>
+				</div>
+				<p class="result-message1"></p>
+				<p class="result-message"></p>
+				<div id="label-container" class="d-flex flex-column justify-content-around"></div>
+				<!-- Go to www.addthis.com/dashboard to customize your tools -->
+				<div class="addthis_inline_share_toolbox"></div>
+
+				<div class="pt-3 image-title-wrap">
+					<button
+						type="button p-2"
+						onclick="location.href='ko_princess.html' "
+						class="try-again-btn"
+					>
+						<span class="try-again-text">다시 해보기</span>
+					</button>
+				</div>
+			</div>
+			<!-- <div class="file-upload-content">
+				<img class="file-upload-image" id="user_image" src="#" alt="your image" />
+				<div class="image-title-wrap">
+					<button type="button p-2" class="try-again-btn" onclick="gaReload()"> /선택1
+					<button type="button" onclick="removeUpload()" class="remove-image">
+						새로 올리기 <span class="image-title">Uploaded Image</span>
+					</button>
+				</div>
+			</div> -->
+		</div>
+		<!-- <div id="label-container"></div> -->
+		<!-- <section class="section">
+			<ul id="moreInfo" class="list-inline d-flex justify-content-center">
+				<li class="list-inline-item">
+					<a href="ko_blackpink.html">BLACKPINK</a>
+				</li>
+				<li></li>
+				<li class="list-inline-item">
+					<a href="princess.html">Princess</a>
+				</li>
+				<li class="list-inline-item">
+					<a href="decalcomani.html">Angel vs Devil's 데칼코마니</a>
+				</li>
+			</ul>
+		</section> -->
+
+		<!-- 앱 모델 접속시 팝업 공지 
+<div
+	class="modal fade"
+	id="appModal"
+	tabindex="-1"
+	role="dialog"
+	aria-labelledby="appModalLabel"
+	aria-hidden="true"
+>
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="appModalLabel">싱크로율 테스트 신규 앱 출시!</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body d-flex flex-column justify-content-center align-items-center">
+				<img
+					class=""
+					src="https://play-lh.googleusercontent.com/rygnJczQKZHjJbwHAFhrHDIQ6aMEW_KdILtlzdiSojSlLnKe53F9a5jXdp3PSnPaCYz3=s180-rw"
+					alt="app icon"
+				/>
+				<p class="text-center">
+					싱크로율 테스트가 더욱 업그레이드되어 앱으로 출시되었습니다.
+				</p>
+				<a
+					href="https://apps.apple.com/us/app/%EB%8F%99%EB%AC%BC%EC%83%81-%ED%85%8C%EC%8A%A4%ED%8A%B8/id1535560428"
+					><img
+						class="app-download-icon"
+						src="https://blog.kakaocdn.net/dn/7I3T2/btqMkmYdCj6/kUkbmFe0MpcxsHqwLrAUd0/img.png"
+						alt="Android Google Play Store"
+				/></a>
+				<a href="https://play.google.com/store/apps/details?id=com.jocoding.animalfacetest"
+					><img
+						class="app-download-icon"
+						src="https://blog.kakaocdn.net/dn/c6po0N/btqMgsb7Qpb/MQBT1U1xzqvsabAQd4OYGk/img.png"
+						alt="iPhone Apple AppStore"
+				/></a>
+			</div>
+		</div>
+	</div>
+</div>
+-->
+
+		<footer class="footer pt-5 container d-flex justify-content-center">
+			<div>
+				<p>&copy; 낙엽 NAKYUP 2020. All Rights Reserved.</p>
+				<ul id="moreInfo" class="list-inline d-flex justify-content-center">
+					<li class="list-inline-item">
+						<a href="privacy.html">Privacy of NAKYUP</a>
+					</li>
+					<li></li>
+					<li class="list-inline-item">
+						<a href="https://animalface.site/blog">About coding tutorials</a>
+					</li>
+				</ul>
+			</div>
+		</footer>
+
+		<!-- <script>
+			function gaReload() {
+				gtag('event', '다른 사진으로 재시도', {
+					event_category: '다른 사진으로 재시도',
+				});
+				window.location.reload();
+			}
+			function gaReload1() {
+				gtag('event', '다른 사진으로 재시도 1차', {
+					event_category: '다른 사진으로 재시도',
+				});
+			}
+			function gaReload2() {
+				gtag('event', '다른 사진으로 재시도 2차', {
+					event_category: '다른 사진으로 재시도',
+				});
+				window.location.reload();
+			}
+		</script> -->
+
+		<!-- Option 1: Bootstrap Bundle with Popper -->
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+			crossorigin="anonymous"
+		></script>
+
+		<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+
+		<script>
+			function readURL(input) {
+				if (input.files && input.files[0]) {
+					var reader = new FileReader();
+
+					reader.onload = function (e) {
+						$('.image-upload-wrap').hide();
+						$('#loading').show();
+
+						$('.file-upload-image').attr('src', e.target.result);
+						$('.file-upload-content').show();
+
+						$('.image-title').html(input.files[0].name);
+					};
+
+					reader.readAsDataURL(input.files[0]);
+					init().then(() => {
+						console.log('hello');
+						predict();
+						$('#loading').hide();
+					});
+				} else {
+					removeUpload();
+				}
+			}
+
+			function removeUpload() {
+				$('.file-upload-input').replaceWith($('.file-upload-input').clone());
+				$('.file-upload-content').hide();
+				$('.image-upload-wrap').show();
+			}
+			$('.image-upload-wrap').bind('dragover', function () {
+				$('.image-upload-wrap').addClass('image-dropping');
+			});
+			$('.image-upload-wrap').bind('dragleave', function () {
+				$('.image-upload-wrap').removeClass('image-dropping');
+			});
+		</script>
+		<script type="text/javascript">
+			const URL = 'https://teachablemachine.withgoogle.com/models/HDepteUlS/';
+			let model, webcam, labelContainer, maxPredictions;
+			async function init() {
+				const modelURL = URL + 'model.json';
+				const metadataURL = URL + 'metadata.json';
+				model = await tmImage.load(modelURL, metadataURL);
+				maxPredictions = model.getTotalClasses();
+				labelContainer = document.getElementById('label-container');
+				for (let i = 0; i < maxPredictions; i++) {
+					var element = document.createElement('div');
+					element.classList.add('d-flex');
+					labelContainer.appendChild(element);
+				}
+			}
+			async function predict() {
+				var image = document.getElementById('face_image');
+				const prediction = await model.predict(image, false);
+				prediction.sort((a, b) => parseFloat(b.probability) - parseFloat(a.probability));
+				console.log(prediction[0].className);
+				var resultTitle, resultExplain, resultCeleb;
+				switch (prediction[0].className) {
+					case '라푼젤':
+						resultTitle = '라푼젤';
+						resultExplain =
+							'길고 윤기나는 머리결을 가진 건강한 미인상입니다. 유복하다고 보기 어렵고, 다소 힘든 시련을 겪을지도 모르지만, 부지런하고 건강한 그녀는 누구보다 운이 좋은 편입니다.  ';
+						resultCeleb = '넘치는 행동력';
+						break;
+					case '모아나':
+						resultTitle = '모아나';
+						resultExplain =
+							'모아나 공주는 정직함과 신뢰, 타인에 대한 배려를 기본으로 항상 최선을 다하는 진취적이고 긍정적인 그녀 곁엔 듬직한 친구와 동료들이 모이게 됩니다.';
+						resultCeleb = '존경받은 인성';						
+						break;
+					case '백설공주':
+						resultTitle = '백설공주';
+						resultExplain =
+							'백설공주는 둥글둥글한 얼굴과 온화하고 침착한 성격을 가진 전통적인 공주입니다. 다소 통통해 보이는 체형은 관대해 보이고, 하얀 피부와 크고 동그만 눈은 유혹에 쉽게 흔들릴 듯한 인상을 주는 운명의 여인상입니다.  ';
+						resultCeleb = '눈처럼 하얀 순백의 여인상';						
+						break;
+					case '신데렐라':
+						resultTitle = '신데렐라';
+						resultExplain =
+							'태생이 공주는 아니지만 착한 내면이 얼굴과 행동으로 나타나는 그녀는 진실만으로 세상을 상대합니다. 비록 연약해 보이고 위기에 흔들릴지도 모르지만, 그녀를 믿는 친구와 함께 극복해나가는 대기만성형 입니다. 행운이 온다면 꼭 붙잡고 오래오래 행복하세요~';
+						resultCeleb = '오래오래 행복할 행운아';						
+						break;
+					case '안나':
+						resultTitle = '안나';
+						resultExplain =
+							'안나의 모습은 엉뚱하기도 해보이고 순진해 보이기도 하고 본인의 능력 자체는 완벽함이 부족하지만, 어려움 앞에 두려워하거나 숨지 않고 함께 고민하고 어려움을 극복해나가는 믿음직한 리더입니다. ';
+						resultCeleb = '믿음의 리더';						
+						break;
+					case '엘사':
+						resultTitle = '엘사';
+						resultExplain =
+							'하얀 피부에 가늘고 긴 눈썹과 얇은 입술을 가진 엘사는 자기 주관이 뚜렷한 공주입니다. 때때로 차갑게 느껴지지만 누구보다도 가족과 친구를 사랑하는 따뜻한 사랑의 소유자인 그녀는 고독을 아이스크림쌈 싸먹는 치명적인 사랑꾼입니다.';
+						resultCeleb = '치명적이게 따뜻한 얼음공주';						
+						break;
+					case '인어공주':
+						resultTitle = '인어공주';
+						resultExplain =
+							'갸름하고 작은 얼굴인 인어공주는 동안의 상징입니다. 왕의 7녀 중 가장 호기심이 많은 막내딸같이 어리기만 해 보이지만, 큰 눈동자와 입술은 다부진 성격과 슬기로움을 자아냅니다. ';
+						resultCeleb = '호기심많은 행동대장';						
+						break;
+					case '자스민공주':
+						resultTitle = '자스민공주';
+						resultExplain =
+							'자스민은 과하지 않게 꾸미고 있지만 타고난 미인상입니다. 이미 가지고 있는 돈과 명예보다 진실됨을 중요한 판단 기준으로 삼는 자스민은 대담하고 과감하게 선을 넘어보기도 하지만 절대 무모하지는 않습니다. ';
+						resultCeleb = '솔직하고 진취적인 성격의 소유자';						
+						break;
+					case '잠자는숲속의공주':
+						resultTitle = '잠자는 숲속의 공주';
+						resultExplain =
+							'제일 착한 어린아이 1등인 잠자는 숲속의 공주는 상냥하고 온화한 느낌의 소유자입니다. 눈꼬리가 내려가 소극적이거나 위기를 이겨내지 못할 것 같은 그녀는 모성애와 보호본능을 자극하는 여성상입니다. ';
+						resultCeleb = '보호본능을 자극하는 그녀';						
+						break;
+					default:
+						resultTitle = '알수없음';
+						resultExplain = '죄송합니다. 싱크로율 분석에 실패했어요.';
+						resultCeleb = '';
+				}
+
+				var title =
+					"<div class='" +
+					prediction[0].className +
+					"-animal-title'>" +
+					resultTitle +
+					'</div>';
+				var explain = "<div class='animal-explain pt-2'>" + resultExplain + '</div>';
+				var celeb =
+					"<div class='" +
+					prediction[0].className +
+					"-animal-celeb pt-2 pb-2'>" +
+					resultCeleb +
+					'</div>';
+				$('.result-message').html(title + explain + celeb);
+				var barWidth;
+				// for (let i = 0; i < maxPredictions; i++) {
+				for (let i = 0; i < 3; i++) {
+					if (prediction[i].probability.toFixed(2) > 0.1) {
+						barWidth = Math.round(prediction[i].probability.toFixed(2) * 100) + '%';
+					} else if (prediction[i].probability.toFixed(2) >= 0.01) {
+						barWidth = '4%';
+					} else {
+						barWidth = '2%';
+					}
+					var labelTitle;
+					switch (prediction[i].className) {
+						case '라푼젤':
+							labelTitle = 'RapunzelH';
+							break;
+						case '모아나':
+							labelTitle = 'Moana';
+							break;
+						case '백설공주':
+							labelTitle = 'Snow White';
+							break;
+						case '신데렐라':
+							labelTitle = 'Cinderella';
+							break;
+						case '안나':
+							labelTitle = 'Anna';
+							break;
+						case '엘사':
+							labelTitle = 'Elsa';
+							break;
+						case '인어공주':
+							labelTitle = 'Little Mermaid';
+							break;
+						case '자스민공주':
+						labelTitle = 'Jasmine';
+						break;
+						case '잠자는숲속의공주':
+						labelTitle = 'Sleeping beauty';
+						break;
+						default:
+							labelTitle = 'sorry';
+					}
+					var label =
+						"<div class='animal-label d-flex align-items-center'>" +
+						labelTitle +
+						'</div>';
+					var bar =
+						"<div class='bar-container position-relative container'><div class='" +
+						prediction[i].className +
+						"-box'></div><div class='d-flex justify-content-center align-items-center " +
+						prediction[i].className +
+						"-bar' style='width: " +
+						barWidth +
+						"'><span class='d-block percent-text'>" +
+						Math.round(prediction[i].probability.toFixed(2) * 100) +
+						'%</span></div></div>';
+					labelContainer.childNodes[i].innerHTML = label + bar;
+				}
+			}
+		</script>
+
+		<div>
+			<section class="section">
+				<h2 class="subtitle">마음에 드셨다면 친구 추천, 댓글 부탁드려요~</h2>
+			</section>
+		</div>
+
+		<div id="disqus_thread"></div>
+		<script>
+			/**
+			 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+			 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+			/*
+		var disqus_config = function () {
+		this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+		this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+		};
+		*/
+			(function () {
+				// DON'T EDIT BELOW THIS LINE
+				var d = document,
+					s = d.createElement('script');
+				s.src = 'https://nakyup.disqus.com/embed.js';
+				s.setAttribute('data-timestamp', +new Date());
+				(d.head || d.body).appendChild(s);
+			})();
+		</script>
+		<noscript
+			>Please enable JavaScript to view the
+			<a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript
+		>
+	</body>
+	<!-- Copyright (c) 2020 by Aaron Vanston (https://codepen.io/aaronvanston/pen/yNYOXR)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. -->
+</html>
