@@ -45,10 +45,12 @@
 			gtag('js', new Date());
 			gtag('config', 'UA-145482737-6');
 		</script>
-		
-		<!-- Go to www.addthis.com/dashboard to customize your tools 링크보내기 코드 --> 
-		<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5fe5867506cc6dba"></script>
-		
+
+		<!-- Go to www.addthis.com/dashboard to customize your tools 링크보내기 코드 -->
+		<script
+			type="text/javascript"
+			src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5fe5867506cc6dba"
+		></script>
 	</head>
 
 	<body>
@@ -173,10 +175,10 @@
 				</div>
 				<p class="result-message1"></p>
 				<p class="result-message"></p>
-				<div id="label-container" class="d-flex flex-column justify-content-around"></div>	
-                <!-- Go to www.addthis.com/dashboard to customize your tools -->
-                <div class="addthis_inline_share_toolbox"></div>
-            
+				<div id="label-container" class="d-flex flex-column justify-content-around"></div>
+				<!-- Go to www.addthis.com/dashboard to customize your tools -->
+				<div class="addthis_inline_share_toolbox"></div>
+
 				<div class="pt-3 image-title-wrap">
 					<button
 						type="button p-2"
@@ -386,21 +388,21 @@
 							resultTitle = '우월한 외모 ';
 							resultExplain =
 								'배우를 해도 될 만큼 이목구비가 뚜렷하고 하얀피부가 특징인 당신은 BTS의 석진과 닮았어요. 키도 크고 깔끔한 목소리까지 가졌다면 당신은 그저 세상의 빛이세요.';
-							resultCeleb ='';
+							resultCeleb = '';
 							gtag('event', '남성 결과 jin', { event_category: '남성 결과' });
 							break;
 						case 'kook':
 							resultTitle = '남자의 휘파람';
 							resultExplain =
 								'남성미가 넘치는 선굵은 외모의 당신은 평소 조용한 모습인 반면 결정적인 때 휘파람 하나로 슈퍼스타가 될 수 있어요. 양면적 매력이 모두 넘치는 BTS의 정국이 닮았네요. ';
-							resultCeleb ='';
+							resultCeleb = '';
 							gtag('event', '남성 결과 kook', { event_category: '남성 결과' });
 							break;
 						case 'RM':
 							resultTitle = '남다른 센스쟁이';
 							resultExplain =
 								'뚜렷한 인상에 자신만만한 표정과 옷 센스가 좋은 당신은 BTS RM을 가장 많이 닮았네요. 매력적인 목소리로 부르는 랩이 당신과 어울릴 것 같아요.';
-							resultCeleb ='';
+							resultCeleb = '';
 							gtag('event', '남성 결과 RM', { event_category: '남성 결과' });
 							break;
 						case 'sugar':
@@ -447,21 +449,21 @@
 							resultTitle = '빛나는 외모 ';
 							resultExplain =
 								'뚜렷한 이목구비와 하얀피부가 매력인 당신은 BTS의 석진과 닮았어요. 어쩌면 당신은 어둠속에서도 홀로 빛나고 있을것 같아요.';
-							resultCeleb ='';
+							resultCeleb = '';
 							gtag('event', '여성 결과 jin', { event_category: '여성 결과' });
 							break;
 						case 'kook':
 							resultTitle = '보이시한 카리스마';
 							resultExplain =
 								'여성스러우면서도 보이시한 양면적 매력의 당신은 BTS의 정국이 닮았네요. 혹시 남사친보다 여사친이 많지 않으세요?';
-							resultCeleb ='';
+							resultCeleb = '';
 							gtag('event', '여성 결과 kook', { event_category: '여성 결과' });
 							break;
 						case 'RM':
 							resultTitle = '남다른 센스쟁이';
 							resultExplain =
 								'뚜렷한 인상에 자신만만한 표정과 옷 센스가 좋은 당신은 BTS RM을 가장 많이 닮았네요. 매력적인 목소리로 부르는 랩이 당신과 어울릴 것 같아요.';
-							resultCeleb ='';
+							resultCeleb = '';
 							gtag('event', '여성 결과 RM', { event_category: '여성 결과' });
 							break;
 						case 'sugar':
@@ -508,7 +510,7 @@
 				$('.result-message').html(title + explain + celeb);
 				var barWidth;
 				// for (let i = 0; i < maxPredictions; i++) {
-				for (let i = 0; i < 3; i++) {	
+				for (let i = 0; i < 3; i++) {
 					if (prediction[i].probability.toFixed(2) > 0.1) {
 						barWidth = Math.round(prediction[i].probability.toFixed(2) * 100) + '%';
 					} else if (prediction[i].probability.toFixed(2) >= 0.01) {
@@ -565,6 +567,21 @@
 			<section class="section">
 				<h2 class="subtitle">마음에 드셨다면 친구 추천, 댓글 부탁드려요~</h2>
 			</section>
+		</div>
+
+		<div class ad-banner>
+			<ins
+				class="kakao_ad_area"
+				style="display: none;"
+				data-ad-unit="DAN-GY0oCDxYKsq7oxLJ"
+				data-ad-width="320"
+				data-ad-height="100"
+			></ins>
+			<script
+				type="text/javascript"
+				src="//t1.daumcdn.net/kas/static/ba.min.js"
+				async
+			></script>
 		</div>
 
 		<div id="disqus_thread"></div>
