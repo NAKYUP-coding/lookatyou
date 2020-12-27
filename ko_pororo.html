@@ -14,26 +14,26 @@
 			crossorigin="anonymous"
 		/>
 
-		<title>AI similarities test with NAKYUP</title>
-		<link rel="alternate" hreflang="en" href="en_princess.html" />
-		<link rel="alternate" hreflang="ko" href="ko_princess.html" />
-		<link rel="alternate" hreflang="x-default" href="ko_princess.html" />
+		<title>낙엽과 함께하는 닮은꼴 찾기</title>
+		<link rel="alternate" hreflang="ko" href="ko_pororo.html" />
+		<link rel="alternate" hreflang="en" href="en_pororo.html" />
+		<link rel="alternate" hreflang="x-default" href="ko_pororo.html" />
 
 		<meta name="title" content="닮은꼴 찾기" />
 		<meta
 			name="subject"
-			content="얼굴로 보는 인공지능 닮은꼴 찾기, 나와 닮은 인물을 찾아보세요!"
+			content="얼굴로 보는 인공지능 닮은꼴 찾기, 나와 닮은 뽀로로 친구들을 찾아보세요!"
 		/>
 		<meta
 			name="keywords"
-			content="닮은꼴, 인공지능 싱크로율 테스트, 얼굴상, 얼굴상 테스트, 나와 닮은 공주, 백설공주, 안나, 엘사, 자스민, 잠자는, 숲속의, 공주, 모아나, 라푼젤, 신데렐라, 인어공주, AI 얼굴상, 조코딩, 테스트, 낙엽, NAKYUP"
+			content="닮은꼴, 인공지능 싱크로율 테스트, 얼굴상, 얼굴상 테스트, 나와 닮은 뽀로로 친구들, 뽀로로, 해리, 에디, 포비, 페티, 루피, 크롱, AI 얼굴상, 조코딩, 테스트, 낙엽, NAKYUP"
 		/>
 		<meta name="author" content="NAKYUP" />
 		<meta
 			name="description"
 			content="사진으로 보는 인공지능 싱크로율 테스트, 나와 닮은 인물상을 찾아보세요! 대표 연예인 사진 데이터로 학습한 인공지능이 나의 얼굴로 동물상과 특징을 찾아드립니다. 회원가입도 필요없이 화면에서 바로 확인해보세요! 사진 데이터는 그 어디에도 전송되지 않습니다. 인공지능이 보는 나와 친구의 싱크로율 테스트 한번 해보세요! 싱크로율 테스트를 통해 나와 닮은 공주 찾기를 할 수 있습니다. 낙엽의 닮은꼴 찾기는 조코딩의 수익형 웹 만들기 유튜브 영상을 참조하여 제작했어요."
 		/>
-		<link rel="stylesheet" href="style_princess.css" />
+		<link rel="stylesheet" href="style.css" />
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-145482737-6"></script>
 		<script>
@@ -56,7 +56,7 @@
 	<body>
 		<nav class="navbar navbar-expand-lg navbar-light nav-distance">
 			<div class="container-fluid">
-				<a class="navbar-brand" href="#">AI similarities test with NAKYUP</a>
+				<a class="navbar-brand" href="#">낙엽과 함께하는 닮은꼴 찾기</a>
 				<button
 					class="navbar-toggler"
 					type="button"
@@ -70,12 +70,11 @@
 				</button>
 				<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 					<div class="navbar-nav">
-						<a class="nav-link active" aria-current="page" href="ko_princess.html"
-							>Princess</a
+						<a class="nav-link active" aria-current="page" href="ko_pororo.html"
+							>뽀로로 싱크로율</a
 						>
-						<a class="nav-link" href="en_blackpink.html"></a>
-						<a class="nav-link" href="en_index.html">BTS</a>
-						<a class="nav-link" href="decalcomani.html"></a>
+						<a class="nav-link" href="ko_princess.html">공주님 싱크로율</a>
+						<a class="nav-link" href="ko_index.html">BTS 싱크로율</a>
 					</div>
 				</div>
 			</div>
@@ -83,8 +82,8 @@
 		<section class="container d-flex flex-column justify-content-center align-items-center">
 			<span class="select-language">Language</span>
 			<select onchange="changeLanguage(this)" class="custom-select col-8">
+				<option value="ko" lang="ko">한국어</option>
 				<option value="en" lang="en">English</option>
-				<option value="ko" lang="ko">한국어</option>				
 			</select>
 		</section>
 		<script>
@@ -97,29 +96,29 @@
 						navigator.userAgent.indexOf('wv)') > 0)
 				) {
 					if (ua.match('android') != null) {
-						window.open('googlechrome://navigate?url=' + lang.value + '_princess.html');
-						//android 'googlechrome://navigate?url=animalface.site/' +								lang.value + '/index.html'
+						window.open('googlechrome://navigate?url=' + lang.value + '_pororo.html');
+						//android 'googlechrome://navigate?url=애니멀페이스.site/' +								lang.value + '/index.html'
 					} else if (
 						ua.indexOf('iphone') > -1 ||
 						ua.indexOf('ipad') > -1 ||
 						ua.indexOf('ipod') > -1
 					) {
-						window.location.href = lang.value + '_princess.html'; //iOS
-						// href="https://animalface.site/"+lang.value+"/index.html"
+						window.location.href = lang.value + '_pororo.html'; //iOS
+						// href="https://애니멀페이스.site/"+lang.value+"/index.html"
 					} else {
-						window.location.href = lang.value + '_princess.html';
+						window.location.href = lang.value + '_pororo.html';
 						// etc
-						// href ='https://animalface.site/' + lang.value + '/index.html'
+						// href ='https://애니멀페이스.site/' + lang.value + '/index.html'
 					}
 				} else {
-					window.location.href = lang.value + '_princess.html';
-					// window.location.href = 'https://animalface.site/' + lang.value + '/index.html'
+					window.location.href = lang.value + '_pororo.html';
+					// window.location.href = 'https://애니멀페이스.site/' + lang.value + '/index.html'
 				}
 			}
 		</script>
 		<section class="section">
-			<h1 class="title">Artificial intelligence looks for similarities</h1>
-			<h2 class="subtitle">Which princess do I look most like?</h2>
+			<h1 class="title">인공지능이 알려주는 싱크로율</h1>
+			<h2 class="subtitle">나와 닮은 뽀로로 친구는 누구일까?</h2>
 		</section>
 		<section class="youtube">
 			<div class="container mt-5 youtube-cover d-flex flex-row-reverse bd-highlight">
@@ -127,19 +126,19 @@
 				<a
 					href="https://www.youtube.com/channel/UCQNE2JmbasNYbjGAcuBiRRg"
 					class="youtube-link"
-					>By NAKYUP (Linked to Jocoding youtube)
+					>By NAKYUP (LINK to 조코딩 유튜브)
 				</a>
 			</div>
 		</section>
 		<div></div>
 
 		<h4 class="pt-4 pb-2 d-flex justify-content-center">
-			Let's look for some animation princess characters.
+			애니메이션 캐릭터와 싱크로율 천재는 누구?
 		</h4>
 
-		<section class="princess_images">
-			<div class="container mt-3 princess-cover d-flex justify-content-center">
-				<img src="img/princesses.jpg" alt="" />
+		<section class="pororo_images">
+			<div class="container mt-3 image-cover d-flex justify-content-center">
+				<img width="300px" src="img/pororo_img.jpg" alt="" />
 			</div>
 		</section>
 
@@ -158,7 +157,7 @@
 				<div class="drag-text">
 					<img src="img/upload2_57x57.png" class="mt-5 pt-5 upload" alt="upload-image" />
 					<h3 class="mb-5 pb-5 pt-4 upload-text">
-						Click here to upload your face-image.
+						여기를 눌러서 얼굴 정면 사진을 업로드하세요.
 					</h3>
 				</div>
 			</div>
@@ -168,7 +167,7 @@
 					<div class="spinner-border" role="status">
 						<span class="sr-only">Loading...</span>
 					</div>
-					<p class="text-center">NAKYUP's AI is analyzing your face.</p>
+					<p class="text-center">NAKYUP의 AI가 당신의 얼굴을 분석중입니다.</p>
 				</div>
 				<p class="result-message1"></p>
 				<p class="result-message"></p>
@@ -179,10 +178,10 @@
 				<div class="pt-3 image-title-wrap">
 					<button
 						type="button p-2"
-						onclick="location.href='en_princess.html' "
+						onclick="location.href='ko_pororo.html' "
 						class="try-again-btn"
 					>
-						<span class="try-again-text">Try again</span>
+						<span class="try-again-text">다시 해보기</span>
 					</button>
 				</div>
 			</div>
@@ -200,14 +199,14 @@
 		<section class="section">
 			<ul id="moreInfo" class="list-inline d-flex justify-content-center">
 				<li class="list-inline-item">
-					<a href="en_bts.html">BTS</a>
+					<a href="ko_bts.html">BTS</a>
 				</li>
 				<li></li>
 				<li class="list-inline-item">
-					<a href="en_princess.html">Princess</a>
+					<a href="ko_princess.html">공주님</a>
 				</li>
 				<li class="list-inline-item">
-					<a href="en_pororo.html">Pororo friends</a>
+					<a href="ko_pororo.html">뽀로로 친구들</a>
 				</li>
 			</ul>
 		</section>
@@ -221,7 +220,7 @@
 					</li>
 					<li></li>
 					<li class="list-inline-item">
-						<a href="https://animalface.site/blog">About coding tutorials</a>
+						<a href="https://애니멀페이스.site/blog">About coding tutorials</a>
 					</li>
 				</ul>
 			</div>
@@ -296,7 +295,7 @@
 			});
 		</script>
 		<script type="text/javascript">
-			const URL = 'https://teachablemachine.withgoogle.com/models/HDepteUlS/';
+			const URL = 'https://teachablemachine.withgoogle.com/models/qA29CdxnU/';
 			let model, webcam, labelContainer, maxPredictions;
 			async function init() {
 				const modelURL = URL + 'model.json';
@@ -315,82 +314,66 @@
 				const prediction = await model.predict(image, false);
 				prediction.sort((a, b) => parseFloat(b.probability) - parseFloat(a.probability));
 				console.log(prediction[0].className);
-				var resultTitle, resultExplain, resultCeleb,resultCode;
+				var resultTitle, resultExplain, resultCeleb, resultCode;
 				switch (prediction[0].className) {
-					case '라푼젤':
-						resultTitle = 'RapunzelH';
-						resultExplain =
-							'It is a healthy beauty with long, glossy hair. It may be hard to say that she is well-off, also she may have a hard time. But she is more fortunate than anyone else to be diligent and healthy.  ';
-						resultCeleb = 'a powerful person';
+					case 'pororo':
+						resultTitle ='뽀로로';
+						resultExplain ='호기심이 많은 꼬마 펭귄. 뭐든지 궁금한 건 참지 못하고 직접 해보고야 마는 성격으로, 항상 새로운 일에 씩씩하게 도전하는 용감한 친구예요.  ';
+						resultCeleb = '';
 						resultCode='nakyup1';
 						break;
-					case '모아나':
-						resultTitle = 'Moana';
-						resultExplain =
-							'Princess Moana always does her best based on honesty, trust, and consideration for others, and she is surrounded by reliable friends and colleagues.';
-						resultCeleb = 'a woman of esteem';
+					case 'krong':
+						resultTitle ='크롱';
+						resultExplain ='재롱둥이 아기 공룡. 항상 뽀로로를 따라다니며 말썽을 부리는 사고뭉치지만, 아직은 알고 싶은 것도 많고, 하고 싶은 것도 많은 귀여운 막내랍니다.';
+						resultCeleb = '';
 						resultCode='nakyup2';
 						break;
-					case '백설공주':
-						resultTitle = 'Snow White';
+					case 'petty':
+						resultTitle = '페티';
 						resultExplain =
-							'Snow White is a traditional princess with round face and gentle and calm personality. The somewhat chubby-looking body looks generous, and the white skin and big round eyes give the impression that they are easily swayed by temptation. ';
-						resultCeleb = 'a white, snow-white woman';
+							'활발한 꼬마 펭귄. 명랑한 성격에 리더십이 강한 패티는 다른 친구들보다 운동을 잘해서 친구들이 모두 부러워한답니다. ';
+						resultCeleb = '';
 						resultCode='nakyup3';
 						break;
-					case '신데렐라':
-						resultTitle = 'Cinderella';
+					case 'poby':
+						resultTitle = '포비';
 						resultExplain =
-							'Although she was not born a princess, she deals with the world with only the truth because a good inner side appears through her face and behavior. Although it is fragile and can be shaken by a crisis, it can be overcome and successful with a friend who believes in her. If luck comes, hold onto it and be happy for a long time.';
-						resultCeleb = 'A lucky woman who will be happy for a long time.';
+							'듬직한 꼬마 백곰. 커다란 덩치만큼 마음도 넓어 친구들이 어려울 때마다 제일 먼저 도와주는 마음씨 착한 친구랍니다.';
+						resultCeleb = '';
 						resultCode='nakyup4';
 						break;
-					case '안나':
-						resultTitle = 'Anna';
+					case 'eddy':
+						resultTitle = '에디';
 						resultExplain =
-							'Anna is kind and naive and not perfect for her abilities, but she is a reliable leader who thinks together and overcomes difficulties without hiding before fear or difficulties.';
-						resultCeleb = 'a respected leader';
+							'영리한 발명왕 꼬마 여우. 에디가 만들어 내는 발명품들은 항상 크고 작은 사건을 일으키지만, 친구들에게 멋진 추억을 안겨 준답니다. ';
+						resultCeleb = '';
 						resultCode='nakyup5';
 						break;
-					case '엘사':
-						resultTitle = 'Elsa';
+					case 'harry':
+						resultTitle = '해리';
 						resultExplain =
-							'With white skin, long eyebrows, and thin lips, Elsa is a princess with clear judgment. A warm lover who sometimes feels cold but loves her family and friends more than anyone else, she is a deadly lover wrapped in ice cream.';
-						resultCeleb = 'Fatally Warm Ice Princess';
+							'노래하기를 좋아하는 벌새. 눈치가 없어 친구들을 곤란에 빠트리기도 하지만, 특유의 밝고 명랑한 분위기로 친구들을 즐겁게 만들어 준답니다.';
+						resultCeleb = '';
 						resultCode='nakyup6';
 						break;
-					case '인어공주':
-						resultTitle = 'The Little Mermaid';
+					case 'rupy':
+						resultTitle = '루피';
 						resultExplain =
-							'The Little Mermaid symbolizes youth with her thin, small face. She looks like the youngest daughter of the king\'s seven daughters, but her big eyes and lips create a strong personality and wisdom. ';
-						resultCeleb = 'curious behavior';
+							'다정한 꼬마 비버. 요리하기를 좋아하는 상냥한 성격의 루피는 친구들과 맛있는 음식을 나누어 먹는 것을 가장 좋아합니다.';
+						resultCeleb = '';
 						resultCode='nakyup7';
-						break;
-					case '자스민공주':
-						resultTitle = 'Jasmine';
-						resultExplain =
-							'Jasmine is not overdressed, but she is a natural beauty. Jasmine, who considers truth to be a more important criterion of judgment than money and honor. Sometimes, she boldly crosses the line, but she is not reckless at all. ';
-						resultCeleb = 'a straightforward and enterprising';
-						resultCode='nakyup8';
-						break;
-					case '잠자는숲속의공주':
-						resultTitle = 'Sleeping beauty';
-						resultExplain =
-							'Sleeping Beauty, the best child for her parents, is a sweet and gentle. She is a woman who stimulates maternal love and protective instinct, who seems to be passive or unable to overcome the crisis. ';
-						resultCeleb = 'the instinct for protection';
-						resultCode='nakyup9';
 						break;
 					default:
 						resultTitle = '알수없음';
-						resultExplain = 'Sorry. We failed'
+						resultExplain = '죄송합니다. 싱크로율 분석에 실패했어요.';
 						resultCeleb = '';
 						resultCode='nakyup1';
 				}
+
 				var title = "<div class='" + resultCode + "-title'>" + resultTitle + '</div>';
 				var explain = "<div class='nakyup-explain pt-2'>" + resultExplain + '</div>';
 				var celeb =
 					"<div class='" + resultCode + "-celeb pt-2 pb-2'>" + resultCeleb + '</div>';
-				
 				$('.result-message').html(title + explain + celeb);
 				var barWidth;
 				// for (let i = 0; i < maxPredictions; i++) {
@@ -403,34 +386,29 @@
 						barWidth = '2%';
 					}
 					var labelTitle;
+					
 					switch (prediction[i].className) {
-						case '라푼젤':
-							labelTitle = 'RapunzelH';
+						case 'pororo':
+							labelTitle = 'Pororo';
 							break;
-						case '모아나':
-							labelTitle = 'Moana';
+						case 'krong':
+							labelTitle = 'Crong';
 							break;
-						case '백설공주':
-							labelTitle = 'Snow White';
+						case 'petty':
+							labelTitle = 'Petty';
 							break;
-						case '신데렐라':
-							labelTitle = 'Cinderella';
+						case 'rupy':
+							labelTitle = 'Loopy';
 							break;
-						case '안나':
-							labelTitle = 'Anna';
+						case 'poby':
+							labelTitle = 'Foby';
 							break;
-						case '엘사':
-							labelTitle = 'Elsa';
+						case 'eddy':
+							labelTitle = 'Eddie';
 							break;
-						case '인어공주':
-							labelTitle = 'Little Mermaid';
+						case 'harry':
+							labelTitle = 'Harry';
 							break;
-						case '자스민공주':
-						labelTitle = 'Jasmine';
-						break;
-						case '잠자는숲속의공주':
-						labelTitle = 'Sleeping beauty';
-						break;
 						default:
 							labelTitle = 'sorry';
 					}
@@ -455,7 +433,7 @@
 
 		<div>
 			<section class="section">
-				<h2 class="subtitle">If you liked it, please recommend a friend and leave a comment.~</h2>
+				<h2 class="subtitle">마음에 드셨다면 친구 추천, 댓글 부탁드려요~</h2>
 			</section>
 		</div>
 		<div class ad-banner>
@@ -486,7 +464,6 @@
 				async
 			></script>
 		</div>
-
 		<div id="disqus_thread"></div>
 		<script>
 			/**

@@ -19,21 +19,21 @@
 		<link rel="alternate" hreflang="ko" href="ko_princess.html" />
 		<link rel="alternate" hreflang="x-default" href="ko_princess.html" />
 
-		<meta name="title" content="닮은꼴 찾기" />
+		<meta name="title" content="Syncronization" />
 		<meta
 			name="subject"
-			content="얼굴로 보는 인공지능 닮은꼴 찾기, 나와 닮은 인물을 찾아보세요!"
+			content="Find the resemblance of artificial intelligence with your face, find a person who resembles me!"
 		/>
 		<meta
 			name="keywords"
-			content="닮은꼴, 인공지능 싱크로율 테스트, 얼굴상, 얼굴상 테스트, 나와 닮은 공주, 백설공주, 안나, 엘사, 자스민, 잠자는, 숲속의, 공주, 모아나, 라푼젤, 신데렐라, 인어공주, AI 얼굴상, 조코딩, 테스트, 낙엽, NAKYUP"
+			content="Similarity, artificial intelligence synchronization test, face, face test, face test, Pororo friends who resemble me, Pororo, Harry, Eddie, Foby, Petty, Loopy, Crong, AI facial image, Jocoding, test, fallen leaves, NAKYUP"
 		/>
 		<meta name="author" content="NAKYUP" />
 		<meta
 			name="description"
-			content="사진으로 보는 인공지능 싱크로율 테스트, 나와 닮은 인물상을 찾아보세요! 대표 연예인 사진 데이터로 학습한 인공지능이 나의 얼굴로 동물상과 특징을 찾아드립니다. 회원가입도 필요없이 화면에서 바로 확인해보세요! 사진 데이터는 그 어디에도 전송되지 않습니다. 인공지능이 보는 나와 친구의 싱크로율 테스트 한번 해보세요! 싱크로율 테스트를 통해 나와 닮은 공주 찾기를 할 수 있습니다. 낙엽의 닮은꼴 찾기는 조코딩의 수익형 웹 만들기 유튜브 영상을 참조하여 제작했어요."
+			content="Artificial intelligence synchro rate test in photos, find a person who resembles me! Artificial intelligence learned from representative celebrity photo data will find fauna and features with my face. You don't even need to register as a member, just check it out on the screen! The picture data is not transferred anywhere. Try the synchro rate test of your friend and me as seen by artificial intelligence! Through the synchro rate test, you can find a BTS member who resembles you. Finding the resemblance of the fallen leaves was made by referring to the YouTube video of Jocoding's Profitable Web Creation."
 		/>
-		<link rel="stylesheet" href="style_princess.css" />
+		<link rel="stylesheet" href="style.css" />
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-145482737-6"></script>
 		<script>
@@ -70,12 +70,11 @@
 				</button>
 				<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 					<div class="navbar-nav">
-						<a class="nav-link active" aria-current="page" href="ko_princess.html"
-							>Princess</a
+						<a class="nav-link active" aria-current="page" href="en_pororo.html"
+							>Pororo friends</a
 						>
-						<a class="nav-link" href="en_blackpink.html"></a>
+						<a class="nav-link" href="en_princess.html">princess</a>
 						<a class="nav-link" href="en_index.html">BTS</a>
-						<a class="nav-link" href="decalcomani.html"></a>
 					</div>
 				</div>
 			</div>
@@ -97,29 +96,29 @@
 						navigator.userAgent.indexOf('wv)') > 0)
 				) {
 					if (ua.match('android') != null) {
-						window.open('googlechrome://navigate?url=' + lang.value + '_princess.html');
+						window.open('googlechrome://navigate?url=' + lang.value + '_pororo.html');
 						//android 'googlechrome://navigate?url=animalface.site/' +								lang.value + '/index.html'
 					} else if (
 						ua.indexOf('iphone') > -1 ||
 						ua.indexOf('ipad') > -1 ||
 						ua.indexOf('ipod') > -1
 					) {
-						window.location.href = lang.value + '_princess.html'; //iOS
+						window.location.href = lang.value + '_pororo.html'; //iOS
 						// href="https://animalface.site/"+lang.value+"/index.html"
 					} else {
-						window.location.href = lang.value + '_princess.html';
+						window.location.href = lang.value + '_pororo.html';
 						// etc
 						// href ='https://animalface.site/' + lang.value + '/index.html'
 					}
 				} else {
-					window.location.href = lang.value + '_princess.html';
+					window.location.href = lang.value + '_pororo.html';
 					// window.location.href = 'https://animalface.site/' + lang.value + '/index.html'
 				}
 			}
 		</script>
 		<section class="section">
 			<h1 class="title">Artificial intelligence looks for similarities</h1>
-			<h2 class="subtitle">Which princess do I look most like?</h2>
+			<h2 class="subtitle">Who do I look like Pororo's friend?</h2>
 		</section>
 		<section class="youtube">
 			<div class="container mt-5 youtube-cover d-flex flex-row-reverse bd-highlight">
@@ -134,12 +133,12 @@
 		<div></div>
 
 		<h4 class="pt-4 pb-2 d-flex justify-content-center">
-			Let's look for some animation princess characters.
+			Let's look for some animation characters.
 		</h4>
 
 		<section class="princess_images">
 			<div class="container mt-3 princess-cover d-flex justify-content-center">
-				<img src="img/princesses.jpg" alt="" />
+				<img src="img/pororo_img.jpg" width="350px" alt="" />
 			</div>
 		</section>
 
@@ -179,7 +178,7 @@
 				<div class="pt-3 image-title-wrap">
 					<button
 						type="button p-2"
-						onclick="location.href='en_princess.html' "
+						onclick="location.href='en_pororo.html' "
 						class="try-again-btn"
 					>
 						<span class="try-again-text">Try again</span>
@@ -296,7 +295,7 @@
 			});
 		</script>
 		<script type="text/javascript">
-			const URL = 'https://teachablemachine.withgoogle.com/models/HDepteUlS/';
+			const URL = 'https://teachablemachine.withgoogle.com/models/qA29CdxnU/';
 			let model, webcam, labelContainer, maxPredictions;
 			async function init() {
 				const modelURL = URL + 'model.json';
@@ -315,70 +314,56 @@
 				const prediction = await model.predict(image, false);
 				prediction.sort((a, b) => parseFloat(b.probability) - parseFloat(a.probability));
 				console.log(prediction[0].className);
-				var resultTitle, resultExplain, resultCeleb,resultCode;
+				var resultTitle, resultExplain, resultCeleb, resultCode;
 				switch (prediction[0].className) {
-					case '라푼젤':
-						resultTitle = 'RapunzelH';
+					case 'pororo':
+						resultTitle = 'Pororo';
 						resultExplain =
-							'It is a healthy beauty with long, glossy hair. It may be hard to say that she is well-off, also she may have a hard time. But she is more fortunate than anyone else to be diligent and healthy.  ';
-						resultCeleb = 'a powerful person';
+							'Curious young penguin, he is a brave friend who always tries new things bravely. This is because he can\'t control what he\'s curious about. ';
+						resultCeleb = '';
 						resultCode='nakyup1';
 						break;
-					case '모아나':
-						resultTitle = 'Moana';
+					case 'krong':
+						resultTitle = 'Crong';
 						resultExplain =
-							'Princess Moana always does her best based on honesty, trust, and consideration for others, and she is surrounded by reliable friends and colleagues.';
-						resultCeleb = 'a woman of esteem';
+							'Cute baby dinosaur. He\'s always following Pororo around and making trouble, but he\'s still the cute youngest who wants to know a lot and wants to do a lot of things.';
+						resultCeleb = '';
 						resultCode='nakyup2';
 						break;
-					case '백설공주':
-						resultTitle = 'Snow White';
+					case 'petty':
+						resultTitle = 'Petty';
 						resultExplain =
-							'Snow White is a traditional princess with round face and gentle and calm personality. The somewhat chubby-looking body looks generous, and the white skin and big round eyes give the impression that they are easily swayed by temptation. ';
-						resultCeleb = 'a white, snow-white woman';
+							'A lively little penguin Petty, who has a cheerful personality and strong leadership, is better at sports than other friends, so all of her friends envy her.';
+						resultCeleb = '';
 						resultCode='nakyup3';
 						break;
-					case '신데렐라':
-						resultTitle = 'Cinderella';
+					case 'poby':
+						resultTitle = 'Foby';
 						resultExplain =
-							'Although she was not born a princess, she deals with the world with only the truth because a good inner side appears through her face and behavior. Although it is fragile and can be shaken by a crisis, it can be overcome and successful with a friend who believes in her. If luck comes, hold onto it and be happy for a long time.';
-						resultCeleb = 'A lucky woman who will be happy for a long time.';
+							'A reliable little white bear He is a kind friend who helps his friends whenever they are in trouble because he has a big heart.';
+						resultCeleb = '';
 						resultCode='nakyup4';
 						break;
-					case '안나':
-						resultTitle = 'Anna';
+					case 'eddy':
+						resultTitle = 'Eddie';
 						resultExplain =
-							'Anna is kind and naive and not perfect for her abilities, but she is a reliable leader who thinks together and overcomes difficulties without hiding before fear or difficulties.';
-						resultCeleb = 'a respected leader';
+							'The clever inventor little fox. Eddy\'s inventions always cause big and small incidents, but they give great memories to his friends. ';
+						resultCeleb = '';
 						resultCode='nakyup5';
 						break;
-					case '엘사':
-						resultTitle = 'Elsa';
+					case 'harry':
+						resultTitle = 'Harry';
 						resultExplain =
-							'With white skin, long eyebrows, and thin lips, Elsa is a princess with clear judgment. A warm lover who sometimes feels cold but loves her family and friends more than anyone else, she is a deadly lover wrapped in ice cream.';
-						resultCeleb = 'Fatally Warm Ice Princess';
+							'Hummingbird who like to sing. Harry sometimes put their friends in trouble. Harry make their friends happy with their unique bright and cheerful atmosphere.';
+						resultCeleb = '';
 						resultCode='nakyup6';
 						break;
-					case '인어공주':
-						resultTitle = 'The Little Mermaid';
+					case 'rupy':
+						resultTitle = 'Loopy';
 						resultExplain =
-							'The Little Mermaid symbolizes youth with her thin, small face. She looks like the youngest daughter of the king\'s seven daughters, but her big eyes and lips create a strong personality and wisdom. ';
-						resultCeleb = 'curious behavior';
+							'A friendly little beaver Loopy, who likes to cook, likes to share delicious food with her friends the most.';
+						resultCeleb = '';						
 						resultCode='nakyup7';
-						break;
-					case '자스민공주':
-						resultTitle = 'Jasmine';
-						resultExplain =
-							'Jasmine is not overdressed, but she is a natural beauty. Jasmine, who considers truth to be a more important criterion of judgment than money and honor. Sometimes, she boldly crosses the line, but she is not reckless at all. ';
-						resultCeleb = 'a straightforward and enterprising';
-						resultCode='nakyup8';
-						break;
-					case '잠자는숲속의공주':
-						resultTitle = 'Sleeping beauty';
-						resultExplain =
-							'Sleeping Beauty, the best child for her parents, is a sweet and gentle. She is a woman who stimulates maternal love and protective instinct, who seems to be passive or unable to overcome the crisis. ';
-						resultCeleb = 'the instinct for protection';
-						resultCode='nakyup9';
 						break;
 					default:
 						resultTitle = '알수없음';
@@ -386,11 +371,11 @@
 						resultCeleb = '';
 						resultCode='nakyup1';
 				}
+
 				var title = "<div class='" + resultCode + "-title'>" + resultTitle + '</div>';
 				var explain = "<div class='nakyup-explain pt-2'>" + resultExplain + '</div>';
 				var celeb =
 					"<div class='" + resultCode + "-celeb pt-2 pb-2'>" + resultCeleb + '</div>';
-				
 				$('.result-message').html(title + explain + celeb);
 				var barWidth;
 				// for (let i = 0; i < maxPredictions; i++) {
@@ -403,34 +388,29 @@
 						barWidth = '2%';
 					}
 					var labelTitle;
+					
 					switch (prediction[i].className) {
-						case '라푼젤':
-							labelTitle = 'RapunzelH';
+						case 'pororo':
+							labelTitle = 'Pororo';
 							break;
-						case '모아나':
-							labelTitle = 'Moana';
+						case 'krong':
+							labelTitle = 'Crong';
 							break;
-						case '백설공주':
-							labelTitle = 'Snow White';
+						case 'petty':
+							labelTitle = 'Petty';
 							break;
-						case '신데렐라':
-							labelTitle = 'Cinderella';
+						case 'rupy':
+							labelTitle = 'Loopy';
 							break;
-						case '안나':
-							labelTitle = 'Anna';
+						case 'poby':
+							labelTitle = 'Foby';
 							break;
-						case '엘사':
-							labelTitle = 'Elsa';
+						case 'eddy':
+							labelTitle = 'Eddie';
 							break;
-						case '인어공주':
-							labelTitle = 'Little Mermaid';
+						case 'harry':
+							labelTitle = 'Harry';
 							break;
-						case '자스민공주':
-						labelTitle = 'Jasmine';
-						break;
-						case '잠자는숲속의공주':
-						labelTitle = 'Sleeping beauty';
-						break;
 						default:
 							labelTitle = 'sorry';
 					}

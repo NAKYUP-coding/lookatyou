@@ -73,9 +73,8 @@
 						<a class="nav-link active" aria-current="page" href="ko_princess.html"
 							>Princess싱크로율</a
 						>
-						<a class="nav-link" href="ko_blackpink.html">준비중</a>
+						<a class="nav-link" href="ko_pororo.html">뽀로로 친구들 싱크로율</a>
 						<a class="nav-link" href="ko_index.html">BTS싱크로율</a>
-						<a class="nav-link" href="decalcomani.html">준비중</a>
 					</div>
 				</div>
 			</div>
@@ -197,65 +196,20 @@
 			</div> -->
 		</div>
 		<!-- <div id="label-container"></div> -->
-		<!-- <section class="section">
+		<section class="section">
 			<ul id="moreInfo" class="list-inline d-flex justify-content-center">
 				<li class="list-inline-item">
-					<a href="ko_blackpink.html">BLACKPINK</a>
+					<a href="ko_bts.html">BTS</a>
 				</li>
 				<li></li>
 				<li class="list-inline-item">
-					<a href="princess.html">Princess</a>
+					<a href="ko_princess.html">공주님</a>
 				</li>
 				<li class="list-inline-item">
-					<a href="decalcomani.html">Angel vs Devil's 데칼코마니</a>
+					<a href="ko_pororo.html">뽀로로 친구들</a>
 				</li>
 			</ul>
-		</section> -->
-
-		<!-- 앱 모델 접속시 팝업 공지 
-<div
-	class="modal fade"
-	id="appModal"
-	tabindex="-1"
-	role="dialog"
-	aria-labelledby="appModalLabel"
-	aria-hidden="true"
->
-	<div class="modal-dialog" role="document">
-		<div class="modal-content">
-			<div class="modal-header">
-				<h5 class="modal-title" id="appModalLabel">싱크로율 테스트 신규 앱 출시!</h5>
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-				</button>
-			</div>
-			<div class="modal-body d-flex flex-column justify-content-center align-items-center">
-				<img
-					class=""
-					src="https://play-lh.googleusercontent.com/rygnJczQKZHjJbwHAFhrHDIQ6aMEW_KdILtlzdiSojSlLnKe53F9a5jXdp3PSnPaCYz3=s180-rw"
-					alt="app icon"
-				/>
-				<p class="text-center">
-					싱크로율 테스트가 더욱 업그레이드되어 앱으로 출시되었습니다.
-				</p>
-				<a
-					href="https://apps.apple.com/us/app/%EB%8F%99%EB%AC%BC%EC%83%81-%ED%85%8C%EC%8A%A4%ED%8A%B8/id1535560428"
-					><img
-						class="app-download-icon"
-						src="https://blog.kakaocdn.net/dn/7I3T2/btqMkmYdCj6/kUkbmFe0MpcxsHqwLrAUd0/img.png"
-						alt="Android Google Play Store"
-				/></a>
-				<a href="https://play.google.com/store/apps/details?id=com.jocoding.animalfacetest"
-					><img
-						class="app-download-icon"
-						src="https://blog.kakaocdn.net/dn/c6po0N/btqMgsb7Qpb/MQBT1U1xzqvsabAQd4OYGk/img.png"
-						alt="iPhone Apple AppStore"
-				/></a>
-			</div>
-		</div>
-	</div>
-</div>
--->
+		</section>
 
 		<footer class="footer pt-5 container d-flex justify-content-center">
 			<div>
@@ -360,81 +314,80 @@
 				const prediction = await model.predict(image, false);
 				prediction.sort((a, b) => parseFloat(b.probability) - parseFloat(a.probability));
 				console.log(prediction[0].className);
-				var resultTitle, resultExplain, resultCeleb;
+				var resultTitle, resultExplain, resultCeleb, resultCode;
 				switch (prediction[0].className) {
 					case '라푼젤':
 						resultTitle = '라푼젤';
 						resultExplain =
-							'길고 윤기나는 머리결을 가진 건강한 미인상입니다. 유복하다고 보기 어렵고, 다소 힘든 시련을 겪을지도 모르지만, 부지런하고 건강한 그녀는 누구보다 운이 좋은 편입니다.  ';
+							'길고 윤기나는 머리결을 가진 건강한 미인상입니다. 유복하다고 보기 어렵고, 다소 힘든 시련을 겪을지도 모르지만, 부지런하고 건강한 그녀는 누구보다 운이 좋은 편입니다.';
 						resultCeleb = '넘치는 행동력';
+						resultCode = 'nakyup1';
 						break;
 					case '모아나':
 						resultTitle = '모아나';
 						resultExplain =
 							'모아나 공주는 정직함과 신뢰, 타인에 대한 배려를 기본으로 항상 최선을 다하는 진취적이고 긍정적인 그녀 곁엔 듬직한 친구와 동료들이 모이게 됩니다.';
-						resultCeleb = '존경받은 인성';						
+						resultCeleb = '존경받은 인성';
+						resultCode = 'nakyup2';
 						break;
 					case '백설공주':
 						resultTitle = '백설공주';
 						resultExplain =
 							'백설공주는 둥글둥글한 얼굴과 온화하고 침착한 성격을 가진 전통적인 공주입니다. 다소 통통해 보이는 체형은 관대해 보이고, 하얀 피부와 크고 동그만 눈은 유혹에 쉽게 흔들릴 듯한 인상을 주는 운명의 여인상입니다.  ';
-						resultCeleb = '눈처럼 하얀 순백의 여인상';						
+						resultCeleb = '눈처럼 하얀 순백의 여인상';
+						resultCode = 'nakyup3';
 						break;
 					case '신데렐라':
 						resultTitle = '신데렐라';
 						resultExplain =
 							'태생이 공주는 아니지만 착한 내면이 얼굴과 행동으로 나타나는 그녀는 진실만으로 세상을 상대합니다. 비록 연약해 보이고 위기에 흔들릴지도 모르지만, 그녀를 믿는 친구와 함께 극복해나가는 대기만성형 입니다. 행운이 온다면 꼭 붙잡고 오래오래 행복하세요~';
-						resultCeleb = '오래오래 행복할 행운아';						
+						resultCeleb = '오래오래 행복할 행운아';
+						resultCode = 'nakyup4';
 						break;
 					case '안나':
 						resultTitle = '안나';
 						resultExplain =
 							'안나의 모습은 엉뚱하기도 해보이고 순진해 보이기도 하고 본인의 능력 자체는 완벽함이 부족하지만, 어려움 앞에 두려워하거나 숨지 않고 함께 고민하고 어려움을 극복해나가는 믿음직한 리더입니다. ';
-						resultCeleb = '믿음의 리더';						
+						resultCeleb = '믿음의 리더';
+						resultCode = 'nakyup5';
 						break;
 					case '엘사':
 						resultTitle = '엘사';
 						resultExplain =
 							'하얀 피부에 가늘고 긴 눈썹과 얇은 입술을 가진 엘사는 자기 주관이 뚜렷한 공주입니다. 때때로 차갑게 느껴지지만 누구보다도 가족과 친구를 사랑하는 따뜻한 사랑의 소유자인 그녀는 고독을 아이스크림쌈 싸먹는 치명적인 사랑꾼입니다.';
-						resultCeleb = '치명적이게 따뜻한 얼음공주';						
+						resultCeleb = '치명적이게 따뜻한 얼음공주';
+						resultCode = 'nakyup6';
 						break;
 					case '인어공주':
 						resultTitle = '인어공주';
 						resultExplain =
 							'갸름하고 작은 얼굴인 인어공주는 동안의 상징입니다. 왕의 7녀 중 가장 호기심이 많은 막내딸같이 어리기만 해 보이지만, 큰 눈동자와 입술은 다부진 성격과 슬기로움을 자아냅니다. ';
-						resultCeleb = '호기심많은 행동대장';						
+						resultCeleb = '호기심많은 행동대장';
+						resultCode = 'nakyup7';
 						break;
 					case '자스민공주':
 						resultTitle = '자스민공주';
 						resultExplain =
 							'자스민은 과하지 않게 꾸미고 있지만 타고난 미인상입니다. 이미 가지고 있는 돈과 명예보다 진실됨을 중요한 판단 기준으로 삼는 자스민은 대담하고 과감하게 선을 넘어보기도 하지만 절대 무모하지는 않습니다. ';
-						resultCeleb = '솔직하고 진취적인 성격의 소유자';						
+						resultCeleb = '솔직하고 진취적인 성격의 소유자';
+						resultCode = 'nakyup8';
 						break;
 					case '잠자는숲속의공주':
 						resultTitle = '잠자는 숲속의 공주';
 						resultExplain =
 							'제일 착한 어린아이 1등인 잠자는 숲속의 공주는 상냥하고 온화한 느낌의 소유자입니다. 눈꼬리가 내려가 소극적이거나 위기를 이겨내지 못할 것 같은 그녀는 모성애와 보호본능을 자극하는 여성상입니다. ';
-						resultCeleb = '보호본능을 자극하는 그녀';						
+						resultCeleb = '보호본능을 자극하는 그녀';
+						resultCode = 'nakyup9';
 						break;
 					default:
 						resultTitle = '알수없음';
 						resultExplain = '죄송합니다. 싱크로율 분석에 실패했어요.';
 						resultCeleb = '';
 				}
-
-				var title =
-					"<div class='" +
-					prediction[0].className +
-					"-animal-title'>" +
-					resultTitle +
-					'</div>';
-				var explain = "<div class='animal-explain pt-2'>" + resultExplain + '</div>';
+				var title = "<div class='" + resultCode + "-title'>" + resultTitle + '</div>';
+				var explain = "<div class='nakyup-explain pt-2'>" + resultExplain + '</div>';
 				var celeb =
-					"<div class='" +
-					prediction[0].className +
-					"-animal-celeb pt-2 pb-2'>" +
-					resultCeleb +
-					'</div>';
+					"<div class='" + resultCode + "-celeb pt-2 pb-2'>" + resultCeleb + '</div>';
 				$('.result-message').html(title + explain + celeb);
 				var barWidth;
 				// for (let i = 0; i < maxPredictions; i++) {
@@ -470,23 +423,23 @@
 							labelTitle = 'Little Mermaid';
 							break;
 						case '자스민공주':
-						labelTitle = 'Jasmine';
-						break;
+							labelTitle = 'Jasmine';
+							break;
 						case '잠자는숲속의공주':
-						labelTitle = 'Sleeping beauty';
-						break;
+							labelTitle = 'Sleeping beauty';
+							break;
 						default:
 							labelTitle = 'sorry';
 					}
 					var label =
-						"<div class='animal-label d-flex align-items-center'>" +
+						"<div class='nakyup-label d-flex align-items-center'>" +
 						labelTitle +
 						'</div>';
 					var bar =
-						"<div class='bar-container position-relative container'><div class='" +
-						prediction[i].className +
-						"-box'></div><div class='d-flex justify-content-center align-items-center " +
-						prediction[i].className +
+						"<div class='bar-container position-relative container'><div class=nakyup'" +
+						(i + 1) +
+						"-box'></div><div class='d-flex justify-content-center align-items-center nakyup" +
+						(i + 1) +
 						"-bar' style='width: " +
 						barWidth +
 						"'><span class='d-block percent-text'>" +
@@ -509,6 +462,20 @@
 				data-ad-unit="DAN-GY0oCDxYKsq7oxLJ"
 				data-ad-width="320"
 				data-ad-height="100"
+			></ins>
+			<script
+				type="text/javascript"
+				src="//t1.daumcdn.net/kas/static/ba.min.js"
+				async
+			></script>
+		</div>
+		<div class ad-banner>
+			<ins
+				class="kakao_ad_area"
+				style="display: none;"
+				data-ad-unit="DAN-5MvUWM0ZnIOH1G5A"
+				data-ad-width="250"
+				data-ad-height="250"
 			></ins>
 			<script
 				type="text/javascript"

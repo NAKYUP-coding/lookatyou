@@ -14,7 +14,7 @@
 			crossorigin="anonymous"
 		/>
 
-		<title>AI Syncronization with NAKYUP</title>
+		<title>AI similarities test with NAKYUP</title>
 		<link rel="alternate" hreflang="en" href="en_index.html" />
 		<link rel="alternate" hreflang="ko" href="ko_index.html" />		
 		<link rel="alternate" hreflang="x-default" href="index.html" />
@@ -56,7 +56,7 @@
 	<body>
 		<nav class="navbar navbar-expand-lg navbar-light nav-distance">
 			<div class="container-fluid">
-				<a class="navbar-brand" href="#">AI Syncronization with NAKYUP</a>
+				<a class="navbar-brand" href="#">AI similarities test with NAKYUP</a>
 				<button
 					class="navbar-toggler"
 					type="button"
@@ -71,9 +71,8 @@
 				<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 					<div class="navbar-nav">
 						<a class="nav-link active" aria-current="page" href="index.html">BTS</a>
-						<a class="nav-link" href="en_blackpink.html">Coming Soon</a>
-						<a class="nav-link" href="en_princess.html">princess</a>
-						<a class="nav-link" href="decalcomani.html">Coming Soon Decalcomani</a>
+						<a class="nav-link" href="en_princess.html">Princess</a>
+						<a class="nav-link" href="en_pororo.html">Pororo friends</a>
 					</div>
 				</div>
 			</div>
@@ -116,8 +115,8 @@
 			}
 		</script>
 		<section class="section">
-			<h1 class="title">Synchronization rate from artificial intelligence</h1>
-			<h2 class="subtitle">Who am I like BTS?</h2>
+			<h1 class="title">Artificial intelligence looks for similarities</h1>
+			<h2 class="subtitle">Which BTS do I look like?</h2>
 		</section>
 		<section class="youtube">
 			<div class="container mt-5 youtube-cover d-flex flex-row-reverse bd-highlight">
@@ -198,20 +197,20 @@
 			</div> -->
 		</div>
 		<!-- <div id="label-container"></div> -->
-		<!-- <section class="section">
+		<section class="section">
 			<ul id="moreInfo" class="list-inline d-flex justify-content-center">
 				<li class="list-inline-item">
-					<a href="blackpink.html">BLACKPINK</a>
+					<a href="ko_bts.html">BTS</a>
 				</li>
 				<li></li>
 				<li class="list-inline-item">
-					<a href="princess.html">Princess</a>
+					<a href="ko_princess.html">Princess</a>
 				</li>
 				<li class="list-inline-item">
-					<a href="angelvsdevil.html">Angel vs Devil's 데칼코마니</a>
+					<a href="ko_pororo.html">Pororo friends</a>
 				</li>
 			</ul>
-		</section> -->
+		</section>
 
 		<!-- 앱 모델 접속시 팝업 공지 
 <div
@@ -369,7 +368,7 @@
 				prediction.sort((a, b) => parseFloat(b.probability) - parseFloat(a.probability));
 				console.log(prediction[0].className);
 				$('.result-message1').html(title + explain + celeb);
-				var resultTitle, resultExplain, resultCeleb;
+				var resultTitle, resultExplain, resultCeleb, resultCode;
 				if (document.getElementById('gender').checked) {
 					gtag('event', '테스트 수행', {
 						event_category: '테스트 수행',
@@ -381,6 +380,7 @@
 							resultExplain =
 								'Did you know that there are some women who feel cuteness from your ordinary? If you exude unexpected charm with an explosive dance, 100% synchro rate with BTS J-Hope!';
 							resultCeleb = '';
+							resultCode = 'nakyup1';
 							gtag('event', '남성 결과 jhop', { event_category: '남성 결과' });
 							break;
 						case 'jin':
@@ -388,6 +388,7 @@
 							resultExplain =
 								"You are similar to BTS' Seokjin, who has clear features and white skin enough to be an actor. If you have a tall, clear voice, you are just the light of the world.";
 							resultCeleb = '';
+							resultCode = 'nakyup2';
 							gtag('event', '남성 결과 jin', { event_category: '남성 결과' });
 							break;
 						case 'kook':
@@ -395,6 +396,7 @@
 							resultExplain =
 								"You, who are full of masculinity and bold appearance, can be a superstar with just a whistle while you are usually quiet. You look like BTS's Jungkook";
 							resultCeleb = '';
+							resultCode = 'nakyup3';
 							gtag('event', '남성 결과 kook', { event_category: '남성 결과' });
 							break;
 						case 'RM':
@@ -402,6 +404,7 @@
 							resultExplain =
 								"You, who have a clear impression, a confident expression and a good sense of clothes, resemble BTS's RM the most. I think the rap you sing in a charming voice will suit you.";
 							resultCeleb = '';
+							resultCode = 'nakyup4';
 							gtag('event', '남성 결과 RM', { event_category: '남성 결과' });
 							break;
 						case 'sugar':
@@ -409,6 +412,7 @@
 							resultExplain =
 								"You resemble BTS Suga, who teases your friend's heart with an indifferent and a little sleepy expression. Show your kindness with a smile sometimes. The charm of a superstar!";
 							resultCeleb = '';
+							resultCode = 'nakyup5';
 							gtag('event', '남성 결과 sugar', { event_category: '남성 결과' });
 							break;
 						case 'jimin':
@@ -416,6 +420,7 @@
 							resultExplain =
 								'You are loved for the charm that subtly exudes even if you are still! How are your eyes, nose, and mouth? Humility may be a luxury for you who remind you of BTS Jimin... maybe.';
 							resultCeleb = '';
+							resultCode = 'nakyup6';
 							gtag('event', '남성 결과 jimin', { event_category: '남성 결과' });
 							break;
 						case 'vy':
@@ -423,12 +428,14 @@
 							resultExplain =
 								'You, who resemble BTS V, which was selected as the number 1 best-looking face in 2017, will be a great help just by being together. With you, your friend will be able to overcome any ordeal in the world. ';
 							resultCeleb = '';
+							resultCode = 'nakyup7';
 							gtag('event', '남성 결과 vy', { event_category: '남성 결과' });
 							break;
 						default:
 							resultTitle = '알수없음';
 							resultExplain = 'Sorry. Analysis failed.';
 							resultCeleb = '';
+							resultCode = 'nakyup1';
 							gtag('event', '남성 결과 알수없음', { event_category: '남성 결과' });
 					}
 				} else {
@@ -442,6 +449,7 @@
 							resultExplain =
 								'Did you know that there are some women who feel cuteness from your ordinary? If you exude unexpected charm with an explosive dance, 100% synchro rate with BTS J-Hope!';
 							resultCeleb = '';
+							resultCode = 'nakyup1';
 							gtag('event', '여성 결과 jhop', { event_category: '여성 결과' });
 							break;
 						case 'jin':
@@ -449,6 +457,7 @@
 							resultExplain =
 								"You resemble BTS' Seokjin, with attractive features and white skin. When you're in the darkness and you're shining alone.";
 							resultCeleb = '';
+							resultCode = 'nakyup2';
 							gtag('event', '여성 결과 jin', { event_category: '여성 결과' });
 							break;
 						case 'kook':
@@ -456,6 +465,7 @@
 							resultExplain =
 								'You, who are both feminine and boyish, look like Jungkook of BTS. Do you have more female friends than male friends?';
 							resultCeleb = '';
+							resultCode = 'nakyup3';
 							gtag('event', '여성 결과 kook', { event_category: '여성 결과' });
 							break;
 						case 'RM':
@@ -463,6 +473,7 @@
 							resultExplain =
 								"You, who have a clear impression, a confident expression and a good sense of clothes, resemble BTS's RM the most. I think the rap you sing in a charming voice will suit you.";
 							resultCeleb = '';
+							resultCode = 'nakyup4';
 							gtag('event', '여성 결과 RM', { event_category: '여성 결과' });
 							break;
 						case 'sugar':
@@ -470,6 +481,7 @@
 							resultExplain =
 								"You resemble BTS Suga, who teases your friend's heart with an indifferent and a little sleepy expression. Show your kindness with a smile sometimes. The charm of a superstar!";
 							resultCeleb = '';
+							resultCode = 'nakyup5';
 							gtag('event', '여성 결과 sugar', { event_category: '여성 결과' });
 							break;
 						case 'jimin':
@@ -477,6 +489,7 @@
 							resultExplain =
 								"Your both eyes, nose, and lips are all attractive, so you are the type loved by subtle charms even when you are still. You reminds BTS's Jimin.";
 							resultCeleb = '';
+							resultCode = 'nakyup6';
 							gtag('event', '여성 결과 jimin', { event_category: '여성 결과' });
 							break;
 						case 'vy':
@@ -484,28 +497,21 @@
 							resultExplain =
 								"You, who resemble BTS's V, ranked #1 in 2017's most handsome face, are the number one friend you want to be with. With you, your friend will be able to overcome any ordeal in the world.";
 							resultCeleb = '';
+							resultCode = 'nakyup7';
 							gtag('event', '여성 결과 vy', { event_category: '여성 결과' });
 							break;
 						default:
 							resultTitle = '알수없음';
 							resultExplain = '';
 							resultCeleb = '';
+							resultCode = 'nakyup1';
 							gtag('event', '여성 결과 알수없음', { event_category: '여성 결과' });
 					}
 				}
-				var title =
-					"<div class='" +
-					prediction[0].className +
-					"-animal-title'>" +
-					resultTitle +
-					'</div>';
-				var explain = "<div class='animal-explain pt-2'>" + resultExplain + '</div>';
+				var title = "<div class='" + resultCode + "-title'>" + resultTitle + '</div>';
+				var explain = "<div class='nakyup-explain pt-2'>" + resultExplain + '</div>';
 				var celeb =
-					"<div class='" +
-					prediction[0].className +
-					"-animal-celeb pt-2 pb-2'>" +
-					resultCeleb +
-					'</div>';
+					"<div class='" + resultCode + "-celeb pt-2 pb-2'>" + resultCeleb + '</div>';
 				$('.result-message').html(title + explain + celeb);
 				var barWidth;
 				// for (let i = 0; i < maxPredictions; i++) {
@@ -544,14 +550,14 @@
 							labelTitle = 'sorry';
 					}
 					var label =
-						"<div class='animal-label d-flex align-items-center'>" +
+						"<div class='nakyup-label d-flex align-items-center'>" +
 						labelTitle +
 						'</div>';
 					var bar =
-						"<div class='bar-container position-relative container'><div class='" +
-						prediction[i].className +
-						"-box'></div><div class='d-flex justify-content-center align-items-center " +
-						prediction[i].className +
+						"<div class='bar-container position-relative container'><div class=nakyup'" +
+						(i+1) +
+						"-box'></div><div class='d-flex justify-content-center align-items-center nakyup" +
+						(i+1) +
 						"-bar' style='width: " +
 						barWidth +
 						"'><span class='d-block percent-text'>" +
@@ -568,7 +574,7 @@
 			</section>
 		</div>
 		
-				<div class ad-banner>
+		<div class ad-banner>
 			<ins
 				class="kakao_ad_area"
 				style="display: none;"
@@ -582,7 +588,20 @@
 				async
 			></script>
 		</div>
-
+		<div class ad-banner>
+			<ins
+				class="kakao_ad_area"
+				style="display: none;"
+				data-ad-unit="DAN-5MvUWM0ZnIOH1G5A"
+				data-ad-width="250"
+				data-ad-height="250"
+			></ins>
+			<script
+				type="text/javascript"
+				src="//t1.daumcdn.net/kas/static/ba.min.js"
+				async
+			></script>
+		</div>
 		<div id="disqus_thread"></div>
 		<script>
 			/**
