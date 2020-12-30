@@ -1,12 +1,23 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-TM7LFZ0257"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag('js', new Date());
+
+			gtag('config', 'G-TM7LFZ0257');
+		</script>
 		<!-- Required meta tags -->
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<link rel="shortcut icon" href="nakyup.ico" type="image/x-icon">
-    	<link rel="icon" href="nakyup.ico" type="image/x-icon">	
+		<link rel="shortcut icon" href="nakyup.ico" type="image/x-icon" />
+		<link rel="icon" href="nakyup.ico" type="image/x-icon" />
 		<link href="https://fonts.googleapis.com/css?family=Jua&display=swap" rel="stylesheet" />
 		<!-- Bootstrap CSS -->
 		<link
@@ -85,7 +96,7 @@
 			<span class="select-language">Language</span>
 			<select onchange="changeLanguage(this)" class="custom-select col-8">
 				<option value="en" lang="en">English</option>
-				<option value="ko" lang="ko">한국어</option>				
+				<option value="ko" lang="ko">한국어</option>
 			</select>
 		</section>
 		<script>
@@ -321,57 +332,57 @@
 					case 'pororo':
 						resultTitle = 'Pororo';
 						resultExplain =
-							'Curious young penguin, he is a brave friend who always tries new things bravely. This is because he can\'t control what he\'s curious about. ';
+							"Curious young penguin, he is a brave friend who always tries new things bravely. This is because he can't control what he's curious about. ";
 						resultCeleb = '';
-						resultCode='nakyup1';
+						resultCode = 'nakyup1';
 						break;
 					case 'krong':
 						resultTitle = 'Crong';
 						resultExplain =
-							'Cute baby dinosaur. He\'s always following Pororo around and making trouble, but he\'s still the cute youngest who wants to know a lot and wants to do a lot of things.';
+							"Cute baby dinosaur. He's always following Pororo around and making trouble, but he's still the cute youngest who wants to know a lot and wants to do a lot of things.";
 						resultCeleb = '';
-						resultCode='nakyup2';
+						resultCode = 'nakyup2';
 						break;
 					case 'petty':
 						resultTitle = 'Petty';
 						resultExplain =
 							'A lively little penguin Petty, who has a cheerful personality and strong leadership, is better at sports than other friends, so all of her friends envy her.';
 						resultCeleb = '';
-						resultCode='nakyup3';
+						resultCode = 'nakyup3';
 						break;
 					case 'poby':
 						resultTitle = 'Foby';
 						resultExplain =
 							'A reliable little white bear He is a kind friend who helps his friends whenever they are in trouble because he has a big heart.';
 						resultCeleb = '';
-						resultCode='nakyup4';
+						resultCode = 'nakyup4';
 						break;
 					case 'eddy':
 						resultTitle = 'Eddie';
 						resultExplain =
-							'The clever inventor little fox. Eddy\'s inventions always cause big and small incidents, but they give great memories to his friends. ';
+							"The clever inventor little fox. Eddy's inventions always cause big and small incidents, but they give great memories to his friends. ";
 						resultCeleb = '';
-						resultCode='nakyup5';
+						resultCode = 'nakyup5';
 						break;
 					case 'harry':
 						resultTitle = 'Harry';
 						resultExplain =
 							'Hummingbird who like to sing. Harry sometimes put their friends in trouble. Harry make their friends happy with their unique bright and cheerful atmosphere.';
 						resultCeleb = '';
-						resultCode='nakyup6';
+						resultCode = 'nakyup6';
 						break;
 					case 'rupy':
 						resultTitle = 'Loopy';
 						resultExplain =
 							'A friendly little beaver Loopy, who likes to cook, likes to share delicious food with her friends the most.';
-						resultCeleb = '';						
-						resultCode='nakyup7';
+						resultCeleb = '';
+						resultCode = 'nakyup7';
 						break;
 					default:
 						resultTitle = '알수없음';
-						resultExplain = 'Sorry. We failed'
+						resultExplain = 'Sorry. We failed';
 						resultCeleb = '';
-						resultCode='nakyup1';
+						resultCode = 'nakyup1';
 				}
 
 				var title = "<div class='" + resultCode + "-title'>" + resultTitle + '</div>';
@@ -390,7 +401,7 @@
 						barWidth = '2%';
 					}
 					var labelTitle;
-					
+
 					switch (prediction[i].className) {
 						case 'pororo':
 							labelTitle = 'Pororo';
@@ -422,9 +433,9 @@
 						'</div>';
 					var bar =
 						"<div class='bar-container position-relative container'><div class=nakyup'" +
-						(i+1) +
+						(i + 1) +
 						"-box'></div><div class='d-flex justify-content-center align-items-center nakyup" +
-						(i+1) +
+						(i + 1) +
 						"-bar' style='width: " +
 						barWidth +
 						"'><span class='d-block percent-text'>" +
@@ -437,7 +448,9 @@
 
 		<div>
 			<section class="section">
-				<h2 class="subtitle">If you liked it, please recommend a friend and leave a comment.~</h2>
+				<h2 class="subtitle">
+					If you liked it, please recommend a friend and leave a comment.~
+				</h2>
 			</section>
 		</div>
 		<div class ad-banner>

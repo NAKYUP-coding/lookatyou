@@ -1,12 +1,23 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-TM7LFZ0257"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag('js', new Date());
+
+			gtag('config', 'G-TM7LFZ0257');
+		</script>
 		<!-- Required meta tags -->
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<link rel="shortcut icon" href="nakyup.ico" type="image/x-icon">
-    	<link rel="icon" href="nakyup.ico" type="image/x-icon">
+		<link rel="shortcut icon" href="nakyup.ico" type="image/x-icon" />
+		<link rel="icon" href="nakyup.ico" type="image/x-icon" />
 		<link href="https://fonts.googleapis.com/css?family=Jua&display=swap" rel="stylesheet" />
 		<!-- Bootstrap CSS -->
 		<link
@@ -319,57 +330,59 @@
 				var resultTitle, resultExplain, resultCeleb, resultCode;
 				switch (prediction[0].className) {
 					case 'pororo':
-						resultTitle ='뽀로로';
-						resultExplain ='호기심이 많은 꼬마 펭귄. 뭐든지 궁금한 건 참지 못하고 직접 해보고야 마는 성격으로, 항상 새로운 일에 씩씩하게 도전하는 용감한 친구예요.  ';
+						resultTitle = '뽀로로';
+						resultExplain =
+							'호기심이 많은 꼬마 펭귄. 뭐든지 궁금한 건 참지 못하고 직접 해보고야 마는 성격으로, 항상 새로운 일에 씩씩하게 도전하는 용감한 친구예요.  ';
 						resultCeleb = '';
-						resultCode='nakyup1';
+						resultCode = 'nakyup1';
 						break;
 					case 'krong':
-						resultTitle ='크롱';
-						resultExplain ='재롱둥이 아기 공룡. 항상 뽀로로를 따라다니며 말썽을 부리는 사고뭉치지만, 아직은 알고 싶은 것도 많고, 하고 싶은 것도 많은 귀여운 막내랍니다.';
+						resultTitle = '크롱';
+						resultExplain =
+							'재롱둥이 아기 공룡. 항상 뽀로로를 따라다니며 말썽을 부리는 사고뭉치지만, 아직은 알고 싶은 것도 많고, 하고 싶은 것도 많은 귀여운 막내랍니다.';
 						resultCeleb = '';
-						resultCode='nakyup2';
+						resultCode = 'nakyup2';
 						break;
 					case 'petty':
 						resultTitle = '페티';
 						resultExplain =
 							'활발한 꼬마 펭귄. 명랑한 성격에 리더십이 강한 패티는 다른 친구들보다 운동을 잘해서 친구들이 모두 부러워한답니다. ';
 						resultCeleb = '';
-						resultCode='nakyup3';
+						resultCode = 'nakyup3';
 						break;
 					case 'poby':
 						resultTitle = '포비';
 						resultExplain =
 							'듬직한 꼬마 백곰. 커다란 덩치만큼 마음도 넓어 친구들이 어려울 때마다 제일 먼저 도와주는 마음씨 착한 친구랍니다.';
 						resultCeleb = '';
-						resultCode='nakyup4';
+						resultCode = 'nakyup4';
 						break;
 					case 'eddy':
 						resultTitle = '에디';
 						resultExplain =
 							'영리한 발명왕 꼬마 여우. 에디가 만들어 내는 발명품들은 항상 크고 작은 사건을 일으키지만, 친구들에게 멋진 추억을 안겨 준답니다. ';
 						resultCeleb = '';
-						resultCode='nakyup5';
+						resultCode = 'nakyup5';
 						break;
 					case 'harry':
 						resultTitle = '해리';
 						resultExplain =
 							'노래하기를 좋아하는 벌새. 눈치가 없어 친구들을 곤란에 빠트리기도 하지만, 특유의 밝고 명랑한 분위기로 친구들을 즐겁게 만들어 준답니다.';
 						resultCeleb = '';
-						resultCode='nakyup6';
+						resultCode = 'nakyup6';
 						break;
 					case 'rupy':
 						resultTitle = '루피';
 						resultExplain =
 							'다정한 꼬마 비버. 요리하기를 좋아하는 상냥한 성격의 루피는 친구들과 맛있는 음식을 나누어 먹는 것을 가장 좋아합니다.';
 						resultCeleb = '';
-						resultCode='nakyup7';
+						resultCode = 'nakyup7';
 						break;
 					default:
 						resultTitle = '알수없음';
 						resultExplain = '죄송합니다. 싱크로율 분석에 실패했어요.';
 						resultCeleb = '';
-						resultCode='nakyup1';
+						resultCode = 'nakyup1';
 				}
 
 				var title = "<div class='" + resultCode + "-title'>" + resultTitle + '</div>';
@@ -388,7 +401,7 @@
 						barWidth = '2%';
 					}
 					var labelTitle;
-					
+
 					switch (prediction[i].className) {
 						case 'pororo':
 							labelTitle = 'Pororo';
@@ -420,9 +433,9 @@
 						'</div>';
 					var bar =
 						"<div class='bar-container position-relative container'><div class=nakyup'" +
-						(i+1) +
+						(i + 1) +
 						"-box'></div><div class='d-flex justify-content-center align-items-center nakyup" +
-						(i+1) +
+						(i + 1) +
 						"-bar' style='width: " +
 						barWidth +
 						"'><span class='d-block percent-text'>" +

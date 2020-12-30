@@ -1,12 +1,23 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-TM7LFZ0257"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag('js', new Date());
+
+			gtag('config', 'G-TM7LFZ0257');
+		</script>
 		<!-- Required meta tags -->
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<link rel="shortcut icon" href="nakyup.ico" type="image/x-icon">
-    	<link rel="icon" href="nakyup.ico" type="image/x-icon">
+		<link rel="shortcut icon" href="nakyup.ico" type="image/x-icon" />
+		<link rel="icon" href="nakyup.ico" type="image/x-icon" />
 		<link href="https://fonts.googleapis.com/css?family=Jua&display=swap" rel="stylesheet" />
 		<!-- Bootstrap CSS -->
 		<link
@@ -86,7 +97,7 @@
 			<span class="select-language">Language</span>
 			<select onchange="changeLanguage(this)" class="custom-select col-8">
 				<option value="en" lang="en">English</option>
-				<option value="ko" lang="ko">한국어</option>				
+				<option value="ko" lang="ko">한국어</option>
 			</select>
 		</section>
 		<script>
@@ -317,82 +328,82 @@
 				const prediction = await model.predict(image, false);
 				prediction.sort((a, b) => parseFloat(b.probability) - parseFloat(a.probability));
 				console.log(prediction[0].className);
-				var resultTitle, resultExplain, resultCeleb,resultCode;
+				var resultTitle, resultExplain, resultCeleb, resultCode;
 				switch (prediction[0].className) {
 					case '라푼젤':
 						resultTitle = 'RapunzelH';
 						resultExplain =
 							'It is a healthy beauty with long, glossy hair. It may be hard to say that she is well-off, also she may have a hard time. But she is more fortunate than anyone else to be diligent and healthy.  ';
 						resultCeleb = 'a powerful person';
-						resultCode='nakyup1';
+						resultCode = 'nakyup1';
 						break;
 					case '모아나':
 						resultTitle = 'Moana';
 						resultExplain =
 							'Princess Moana always does her best based on honesty, trust, and consideration for others, and she is surrounded by reliable friends and colleagues.';
 						resultCeleb = 'a woman of esteem';
-						resultCode='nakyup2';
+						resultCode = 'nakyup2';
 						break;
 					case '백설공주':
 						resultTitle = 'Snow White';
 						resultExplain =
 							'Snow White is a traditional princess with round face and gentle and calm personality. The somewhat chubby-looking body looks generous, and the white skin and big round eyes give the impression that they are easily swayed by temptation. ';
 						resultCeleb = 'a white, snow-white woman';
-						resultCode='nakyup3';
+						resultCode = 'nakyup3';
 						break;
 					case '신데렐라':
 						resultTitle = 'Cinderella';
 						resultExplain =
 							'Although she was not born a princess, she deals with the world with only the truth because a good inner side appears through her face and behavior. Although it is fragile and can be shaken by a crisis, it can be overcome and successful with a friend who believes in her. If luck comes, hold onto it and be happy for a long time.';
 						resultCeleb = 'A lucky woman who will be happy for a long time.';
-						resultCode='nakyup4';
+						resultCode = 'nakyup4';
 						break;
 					case '안나':
 						resultTitle = 'Anna';
 						resultExplain =
 							'Anna is kind and naive and not perfect for her abilities, but she is a reliable leader who thinks together and overcomes difficulties without hiding before fear or difficulties.';
 						resultCeleb = 'a respected leader';
-						resultCode='nakyup5';
+						resultCode = 'nakyup5';
 						break;
 					case '엘사':
 						resultTitle = 'Elsa';
 						resultExplain =
 							'With white skin, long eyebrows, and thin lips, Elsa is a princess with clear judgment. A warm lover who sometimes feels cold but loves her family and friends more than anyone else, she is a deadly lover wrapped in ice cream.';
 						resultCeleb = 'Fatally Warm Ice Princess';
-						resultCode='nakyup6';
+						resultCode = 'nakyup6';
 						break;
 					case '인어공주':
 						resultTitle = 'The Little Mermaid';
 						resultExplain =
-							'The Little Mermaid symbolizes youth with her thin, small face. She looks like the youngest daughter of the king\'s seven daughters, but her big eyes and lips create a strong personality and wisdom. ';
+							"The Little Mermaid symbolizes youth with her thin, small face. She looks like the youngest daughter of the king's seven daughters, but her big eyes and lips create a strong personality and wisdom. ";
 						resultCeleb = 'curious behavior';
-						resultCode='nakyup7';
+						resultCode = 'nakyup7';
 						break;
 					case '자스민공주':
 						resultTitle = 'Jasmine';
 						resultExplain =
 							'Jasmine is not overdressed, but she is a natural beauty. Jasmine, who considers truth to be a more important criterion of judgment than money and honor. Sometimes, she boldly crosses the line, but she is not reckless at all. ';
 						resultCeleb = 'a straightforward and enterprising';
-						resultCode='nakyup8';
+						resultCode = 'nakyup8';
 						break;
 					case '잠자는숲속의공주':
 						resultTitle = 'Sleeping beauty';
 						resultExplain =
 							'Sleeping Beauty, the best child for her parents, is a sweet and gentle. She is a woman who stimulates maternal love and protective instinct, who seems to be passive or unable to overcome the crisis. ';
 						resultCeleb = 'the instinct for protection';
-						resultCode='nakyup9';
+						resultCode = 'nakyup9';
 						break;
 					default:
 						resultTitle = '알수없음';
-						resultExplain = 'Sorry. We failed'
+						resultExplain = 'Sorry. We failed';
 						resultCeleb = '';
-						resultCode='nakyup1';
+						resultCode = 'nakyup1';
 				}
 				var title = "<div class='" + resultCode + "-title'>" + resultTitle + '</div>';
 				var explain = "<div class='nakyup-explain pt-2'>" + resultExplain + '</div>';
 				var celeb =
 					"<div class='" + resultCode + "-celeb pt-2 pb-2'>" + resultCeleb + '</div>';
-				
+
 				$('.result-message').html(title + explain + celeb);
 				var barWidth;
 				// for (let i = 0; i < maxPredictions; i++) {
@@ -428,11 +439,11 @@
 							labelTitle = 'Little Mermaid';
 							break;
 						case '자스민공주':
-						labelTitle = 'Jasmine';
-						break;
+							labelTitle = 'Jasmine';
+							break;
 						case '잠자는숲속의공주':
-						labelTitle = 'Sleeping beauty';
-						break;
+							labelTitle = 'Sleeping beauty';
+							break;
 						default:
 							labelTitle = 'sorry';
 					}
@@ -442,9 +453,9 @@
 						'</div>';
 					var bar =
 						"<div class='bar-container position-relative container'><div class=nakyup'" +
-						(i+1) +
+						(i + 1) +
 						"-box'></div><div class='d-flex justify-content-center align-items-center nakyup" +
-						(i+1) +
+						(i + 1) +
 						"-bar' style='width: " +
 						barWidth +
 						"'><span class='d-block percent-text'>" +
@@ -457,7 +468,9 @@
 
 		<div>
 			<section class="section">
-				<h2 class="subtitle">If you liked it, please recommend a friend and leave a comment.~</h2>
+				<h2 class="subtitle">
+					If you liked it, please recommend a friend and leave a comment.~
+				</h2>
 			</section>
 		</div>
 		<div class ad-banner>
